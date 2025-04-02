@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebAPI.Data;
 using WebAPI.Model;
 using WebAPI.Repository;
@@ -8,23 +9,23 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountController : ControllerBase
+    public class AuthController : ControllerBase
     {
-        private readonly IAccountRepository accountRepo;
+        private readonly IAuthRepository accountRepo;
         private readonly CaroDbContext _context;
 
-        public AccountController(IAccountRepository repo, CaroDbContext context) {
+        public AuthController(IAuthRepository repo, CaroDbContext context) {
 
             accountRepo = repo;
             _context = context;
         }
   
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> getUser()
-        {
-            return await _context.Users.ToListAsync();
-        }
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<User>>> getUser()
+        //{
+        //    return await _context.Users.ToListAsync();
+        //}
 
         [HttpPost("SignUp")]
         public async Task<IActionResult> SignUp(SignUpModel model)

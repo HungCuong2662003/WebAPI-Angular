@@ -3,7 +3,7 @@ using WebAPI.Model;
 
 namespace WebAPI.Repository
 {
-    public interface IAccountRepository
+    public interface IAuthRepository
     {
         public Task<IdentityResult> SignUpAsync(SignUpModel model);
         public Task<string> SignInAsync(SignInModel model);

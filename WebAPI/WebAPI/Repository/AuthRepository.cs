@@ -8,13 +8,13 @@ using WebAPI.Model;
 
 namespace WebAPI.Repository
 {
-    public class AccountRepository : IAccountRepository
+    public class AuthRepository : IAuthRepository
     {
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
         private readonly IConfiguration configuration;
 
-        public AccountRepository(UserManager<User> userManager,
+        public AuthRepository(UserManager<User> userManager,
             SignInManager<User> signInManager , 
             IConfiguration configuration) {
             this.userManager=userManager;

@@ -32,6 +32,7 @@ namespace WebAPI.Data
 				.WithMany(u => u.MatchesAsPlayer2)
 				.HasForeignKey(g => g.Player2ID)
 				.OnDelete(DeleteBehavior.Restrict);
+
 		}
 	}
 

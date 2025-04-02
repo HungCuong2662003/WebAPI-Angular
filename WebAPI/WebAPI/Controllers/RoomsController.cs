@@ -24,7 +24,15 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Rooms>>> GetRooms()
         {
-            return await _context.Rooms.ToListAsync();
+            // trả thêm message, totalRows, data, status
+            return Ok(new
+            {
+                message = "Lấy danh sách phòng thành công",
+                totalRows = _context.Rooms.Count(),
+                data = await _context.Rooms.ToListAsync(),
+                status = StatusCodes.Status200OK
+            });
+
         }
 
         // GET: api/Rooms/5
@@ -38,7 +46,12 @@ namespace WebAPI.Controllers
                 return NotFound();
             }
 
-            return rooms;
+            return Ok(new
+            {
+                message = "Lấy thông tin phòng thành công",
+                data = rooms,
+                status = StatusCodes.Status200OK
+            });
         }
 
         // PUT: api/Rooms/5
@@ -69,7 +82,7 @@ namespace WebAPI.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok(rooms);
         }
 
         // POST: api/Rooms
