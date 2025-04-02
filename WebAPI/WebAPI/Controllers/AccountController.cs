@@ -26,6 +26,18 @@ namespace WebAPI.Controllers
         {
             return await _context.Users.ToListAsync();
         }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> User(Guid id)
+        {
+            var User = await _context.Users.FindAsync(id);
+
+            if (User == null)
+            {
+                return NotFound();
+            }
+
+            return User;
+        }
 
         [HttpPost("SignUp")]
         public async Task<IActionResult> SignUp(SignUpModel model)
@@ -33,6 +45,56 @@ namespace WebAPI.Controllers
             var result = await accountRepo.SignUpAsync(model);
             return result.Succeeded ? Ok(new { Success = true }) : BadRequest(result.Errors);
         }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUser(string id, User user)
+        {
+            if (id != user.Id)
+            {
+                return BadRequest("ID không khớp với user");
+            }
+
+            _context.Entry(user).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UserExists(id))
+                {
+                    return NotFound("Không tìm thấy người dùng");
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+        // Hàm kiểm tra user tồn tại
+        private bool UserExists(string id)
+        {
+            return _context.Users.Any(u => u.Id == id);
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(string id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (User == null)
+            {
+                return NotFound();
+            }
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+
+
 
         [HttpPost("SignIn")]
         public async Task<IActionResult> SignIn(SignInModel model)
@@ -42,6 +104,7 @@ namespace WebAPI.Controllers
                 ? Unauthorized(new { Message = "Đăng nhập thất bại" })
                 : Ok(new { Token = token });
         }
+
 
     }
 }
