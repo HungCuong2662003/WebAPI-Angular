@@ -3,47 +3,36 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebAPI.Data
 {
-    public class CaroDbContext : IdentityDbContext<User>
-    {
-        public CaroDbContext(DbContextOptions<CaroDbContext> options) : base(options) { }
+	public class CaroDbContext : IdentityDbContext<User>
+	{
+		public CaroDbContext(DbContextOptions<CaroDbContext> options) : base(options) { }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<GameRoom> GameRooms { get; set; }
-        public DbSet<GamePlayer> GamePlayers { get; set; }
-        public DbSet<Match> Matches { get; set; }
+		public DbSet<User> Users { get; set; }
+		public DbSet<Rooms> Rooms { get; set; }
+		public DbSet<GameMatches> GameMatches { get; set; }
+		public DbSet<Moves> Moves { get; set; }
+		public DbSet<Ranking> Ranking { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<GameRoom>()
-                .HasOne(r => r.Host)
-                .WithMany(u => u.HostedRooms)
-                .HasForeignKey(r => r.HostId)
-                .OnDelete(DeleteBehavior.Cascade); // vẫn giữ cascade ở đây
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			base.OnModelCreating(modelBuilder);
+			modelBuilder.Entity<Moves>()
+				.HasOne(m => m.GameMatch)
+				.WithMany(g => g.Moves)
+				.HasForeignKey(m => m.MatchID)
+				.OnDelete(DeleteBehavior.Restrict);
+			modelBuilder.Entity<GameMatches>()
+				.HasOne(g => g.Player1)
+				.WithMany(u => u.MatchesAsPlayer1)
+				.HasForeignKey(g => g.Player1ID)
+				.OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<GamePlayer>()
-                .HasOne(p => p.User)
-                .WithMany(u => u.GamePlayers)
-                .HasForeignKey(p => p.UserId)
-                .OnDelete(DeleteBehavior.Restrict); // hoặc NoAction
-
-            modelBuilder.Entity<GamePlayer>()
-                .HasOne(p => p.Room)
-                .WithMany(r => r.Players)
-                .HasForeignKey(p => p.RoomId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<Match>()
-                .HasOne(m => m.Room)
-                .WithOne(r => r.Match)
-                .HasForeignKey<Match>(m => m.RoomId);
-
-            modelBuilder.Entity<Match>()
-                .HasOne(m => m.Winner)
-                .WithMany()
-                .HasForeignKey(m => m.WinnerId)
-                .OnDelete(DeleteBehavior.Restrict);
-        }
-    }
+			modelBuilder.Entity<GameMatches>()
+				.HasOne(g => g.Player2)
+				.WithMany(u => u.MatchesAsPlayer2)
+				.HasForeignKey(g => g.Player2ID)
+				.OnDelete(DeleteBehavior.Restrict);
+		}
+	}
 
 }

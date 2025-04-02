@@ -1,85 +1,104 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Caro\\WebAPI\\WebAPI\\",
+  "WorkspaceRootPath": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Migrations\\20250402085135_FixCascadeIssue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebAPI\\Migrations\\20250402085135_FixCascadeIssue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\carodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\carodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\carodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\migrations\\20250402025729_addidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\migrations\\20250402025729_addidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\model\\signupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\signupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\gamematchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\gamematchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Migrations\\20250402085007_FixCascadeIssue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebAPI\\Migrations\\20250402085007_FixCascadeIssue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\movescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\movescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\repository\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repository\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\rankingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\rankingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\model\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\ranking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\ranking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\moves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\moves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\gamematches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\gamematches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Migrations\\20250402084020_new-db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebAPI\\Migrations\\20250402084020_new-db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\model\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402031440_addIdentityASP.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebAPI\\Migrations\\20250402031440_addIdentityASP.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\model\\signupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\signupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\gameroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\gameroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\repository\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repository\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\gameplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\gameplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\gameplayerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\gameplayerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402020036_caroDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebAPI\\Migrations\\20250402020036_caroDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402020014_caroDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402020014_caroDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebAPI\\Migrations\\20250402020014_caroDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\webapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\webapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
@@ -90,101 +109,227 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CaroDbContext.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\CaroDbContext.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Data\\CaroDbContext.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\CaroDbContext.cs",
-              "RelativeToolTip": "WebAPI\\Data\\CaroDbContext.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAywBAAAAAvAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20250402085135_FixCascadeIssue.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Migrations\\20250402085135_FixCascadeIssue.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250402085135_FixCascadeIssue.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Migrations\\20250402085135_FixCascadeIssue.cs",
+              "RelativeToolTip": "WebAPI\\Migrations\\20250402085135_FixCascadeIssue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:41:38.118Z",
+              "WhenOpened": "2025-04-02T08:51:35.705Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "GameMatchesController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\GameMatchesController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\GameMatchesController.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\GameMatchesController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\GameMatchesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:40:48.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\AccountController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T03:45:55.752Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CaroDbContext.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\CaroDbContext.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\CaroDbContext.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\CaroDbContext.cs",
+              "RelativeToolTip": "WebAPI\\Data\\CaroDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA2wBgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T01:41:38.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20250402085007_FixCascadeIssue.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Migrations\\20250402085007_FixCascadeIssue.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250402085007_FixCascadeIssue.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Migrations\\20250402085007_FixCascadeIssue.cs",
+              "RelativeToolTip": "WebAPI\\Migrations\\20250402085007_FixCascadeIssue.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:50:07.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MovesController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\MovesController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\MovesController.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\MovesController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\MovesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:41:30.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RankingsController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\RankingsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\RankingsController.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\RankingsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\RankingsController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:42:00.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RoomsController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\RoomsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\RoomsController.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\RoomsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\RoomsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:42:23.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:42:33.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
               "Title": "User.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\User.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\User.cs",
               "RelativeDocumentMoniker": "WebAPI\\Data\\User.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\User.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\User.cs",
               "RelativeToolTip": "WebAPI\\Data\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T01:38:28.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Program.cs",
-              "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:22:03.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IAccountRepository.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Repository\\IAccountRepository.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Repository\\IAccountRepository.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Repository\\IAccountRepository.cs",
-              "RelativeToolTip": "WebAPI\\Repository\\IAccountRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:23:30.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SignUpModel.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Model\\SignUpModel.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Model\\SignUpModel.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Model\\SignUpModel.cs",
-              "RelativeToolTip": "WebAPI\\Model\\SignUpModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:17:09.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "Rooms.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\Rooms.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\Rooms.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\Rooms.cs",
+              "RelativeToolTip": "WebAPI\\Data\\Rooms.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwBEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:20:41.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Ranking.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\Ranking.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\Ranking.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\Ranking.cs",
+              "RelativeToolTip": "WebAPI\\Data\\Ranking.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:20:41.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Moves.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\Moves.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\Moves.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\Moves.cs",
+              "RelativeToolTip": "WebAPI\\Data\\Moves.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:20:39.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GameMatches.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\GameMatches.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\GameMatches.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\GameMatches.cs",
+              "RelativeToolTip": "WebAPI\\Data\\GameMatches.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwCAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:25:13.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250402084020_new-db.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Migrations\\20250402084020_new-db.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250402084020_new-db.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Migrations\\20250402084020_new-db.cs",
+              "RelativeToolTip": "WebAPI\\Migrations\\20250402084020_new-db.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:40:20.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Repository\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repository\\AccountRepository.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Repository\\AccountRepository.cs",
+              "RelativeToolTip": "WebAPI\\Repository\\AccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T03:26:48.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "SignInModel.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Model\\SignInModel.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Model\\SignInModel.cs",
               "RelativeDocumentMoniker": "WebAPI\\Model\\SignInModel.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Model\\SignInModel.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Model\\SignInModel.cs",
               "RelativeToolTip": "WebAPI\\Model\\SignInModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -193,171 +338,101 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "20250402031440_addIdentityASP.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402031440_addIdentityASP.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250402031440_addIdentityASP.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402031440_addIdentityASP.cs",
-              "RelativeToolTip": "WebAPI\\Migrations\\20250402031440_addIdentityASP.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "SignUpModel.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Model\\SignUpModel.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Model\\SignUpModel.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Model\\SignUpModel.cs",
+              "RelativeToolTip": "WebAPI\\Model\\SignUpModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:14:40.72Z",
+              "WhenOpened": "2025-04-02T03:17:09.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 18,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Repository\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repository\\IAccountRepository.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Repository\\IAccountRepository.cs",
+              "RelativeToolTip": "WebAPI\\Repository\\IAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T03:23:30.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\appsettings.json",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\appsettings.json",
               "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\appsettings.json",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\appsettings.json",
               "RelativeToolTip": "WebAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-04-02T01:44:59.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20250402025729_addIdentity.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402025729_addIdentity.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250402025729_addIdentity.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402025729_addIdentity.cs",
-              "RelativeToolTip": "WebAPI\\Migrations\\20250402025729_addIdentity.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAgwKUAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T02:57:30.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T01:22:03.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 21,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Properties\\launchSettings.json",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "WebAPI\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Properties\\launchSettings.json",
               "RelativeToolTip": "WebAPI\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-02T02:43:04.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T02:43:04.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AccountRepository.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Repository\\AccountRepository.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Repository\\AccountRepository.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Repository\\AccountRepository.cs",
-              "RelativeToolTip": "WebAPI\\Repository\\AccountRepository.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAiwDUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:26:48.543Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GameRoom.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\GameRoom.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Data\\GameRoom.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\GameRoom.cs",
-              "RelativeToolTip": "WebAPI\\Data\\GameRoom.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:39:51.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "GamePlayer.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\GamePlayer.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Data\\GamePlayer.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\GamePlayer.cs",
-              "RelativeToolTip": "WebAPI\\Data\\GamePlayer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:40:15.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Match.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\Match.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Data\\Match.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\Match.cs",
-              "RelativeToolTip": "WebAPI\\Data\\Match.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:40:43.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GamePlayersController.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\GamePlayersController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\GamePlayersController.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\GamePlayersController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\GamePlayersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T02:06:40.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "20250402020036_caroDB.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402020036_caroDB.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250402020036_caroDB.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402020036_caroDB.cs",
-              "RelativeToolTip": "WebAPI\\Migrations\\20250402020036_caroDB.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T02:00:36.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "20250402020014_caroDB.cs",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402020014_caroDB.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Migrations\\20250402020014_caroDB.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402020014_caroDB.cs",
               "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402020014_caroDB.cs",
-              "RelativeToolTip": "WebAPI\\Migrations\\20250402020014_caroDB.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Caro\\WebAPI\\WebAPI\\WebAPI\\Migrations\\20250402020014_caroDB.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T02:00:14.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T02:00:14.415Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "WebAPI",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\WebAPI.csproj",
+              "DocumentIndex": 23,
+              "Title": "WebAPI.csproj",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\WebAPI.csproj",
               "RelativeDocumentMoniker": "WebAPI\\WebAPI.csproj",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\WebAPI.csproj",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\WebAPI.csproj",
               "RelativeToolTip": "WebAPI\\WebAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-02T01:34:04.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T01:34:04.422Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "WebAPI",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\WebAPI.csproj",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\WebAPI.csproj",
               "RelativeDocumentMoniker": "WebAPI\\WebAPI.csproj",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\WebAPI.csproj",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\WebAPI.csproj",
               "RelativeToolTip": "WebAPI\\WebAPI.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-02T01:33:38.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T01:33:38.897Z"
             }
           ]
         }

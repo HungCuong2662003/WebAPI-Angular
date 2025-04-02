@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebAPI.Data
 {
@@ -6,11 +7,17 @@ namespace WebAPI.Data
     {
       public string Firtname { get; set; } = string.Empty;
       public string Lastname { get; set; } = string.Empty;
-        public int? Rating { get; set; } = 1000;
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+		public int EloRating { get; set; } = 1000;
+		public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-        public ICollection<GamePlayer>? GamePlayers { get; set; }
-        public ICollection<GameRoom>? HostedRooms { get; set; }
-    }
+		public ICollection<Rooms>? OwnedRooms { get; set; }
+		[InverseProperty("Player1")]
+		public ICollection<GameMatches>? MatchesAsPlayer1 { get; set; }
+		[InverseProperty("Player2")]
+		public ICollection<GameMatches>? MatchesAsPlayer2 { get; set; }
+		[InverseProperty("Winner")]
+		public ICollection<GameMatches>? MatchesAsWinner { get; set; }
+		public Ranking? Ranking { get; set; }
+	}
 
 }

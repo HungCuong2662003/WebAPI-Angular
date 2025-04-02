@@ -155,93 +155,138 @@ namespace WebAPI.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("WebAPI.Data.GamePlayer", b =>
+            modelBuilder.Entity("WebAPI.Data.GameMatches", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("IsHost")
-                        .HasColumnType("bit");
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Player1ID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Player2ID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<Guid>("RoomId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Symbol")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
+                    b.Property<string>("WinnerID")
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ID");
+
+                    b.HasIndex("Player1ID");
+
+                    b.HasIndex("Player2ID");
 
                     b.HasIndex("RoomId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("WinnerID");
 
-                    b.ToTable("GamePlayers");
+                    b.ToTable("GameMatches");
                 });
 
-            modelBuilder.Entity("WebAPI.Data.GameRoom", b =>
+            modelBuilder.Entity("WebAPI.Data.Moves", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("HostId")
+                    b.Property<Guid>("MatchID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("PlayerID")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("IsPrivate")
+                    b.Property<int>("X")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Y")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("MatchID");
+
+                    b.HasIndex("PlayerID");
+
+                    b.ToTable("Moves");
+                });
+
+            modelBuilder.Entity("WebAPI.Data.Ranking", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Draw")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EloRating")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Lose")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Win")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("UserID")
+                        .IsUnique();
+
+                    b.ToTable("Ranking");
+                });
+
+            modelBuilder.Entity("WebAPI.Data.Rooms", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsPublic")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("OwnerID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("PasswordRoom")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("RoomCode")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ID");
 
-                    b.HasIndex("HostId");
+                    b.HasIndex("OwnerID");
 
-                    b.ToTable("GameRooms");
-                });
-
-            modelBuilder.Entity("WebAPI.Data.Match", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Duration")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("RoomId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("WinnerId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoomId")
-                        .IsUnique();
-
-                    b.HasIndex("WinnerId");
-
-                    b.ToTable("Matches");
+                    b.ToTable("Rooms");
                 });
 
             modelBuilder.Entity("WebAPI.Data.User", b =>
@@ -258,6 +303,9 @@ namespace WebAPI.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("EloRating")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -296,9 +344,6 @@ namespace WebAPI.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
-
-                    b.Property<int?>("Rating")
-                        .HasColumnType("int");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -374,66 +419,101 @@ namespace WebAPI.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("WebAPI.Data.GamePlayer", b =>
+            modelBuilder.Entity("WebAPI.Data.GameMatches", b =>
                 {
-                    b.HasOne("WebAPI.Data.GameRoom", "Room")
-                        .WithMany("Players")
+                    b.HasOne("WebAPI.Data.User", "Player1")
+                        .WithMany("MatchesAsPlayer1")
+                        .HasForeignKey("Player1ID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("WebAPI.Data.User", "Player2")
+                        .WithMany("MatchesAsPlayer2")
+                        .HasForeignKey("Player2ID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("WebAPI.Data.Rooms", "Room")
+                        .WithMany("Matches")
                         .HasForeignKey("RoomId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebAPI.Data.User", "User")
-                        .WithMany("GamePlayers")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Room");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("WebAPI.Data.GameRoom", b =>
-                {
-                    b.HasOne("WebAPI.Data.User", "Host")
-                        .WithMany("HostedRooms")
-                        .HasForeignKey("HostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Host");
-                });
-
-            modelBuilder.Entity("WebAPI.Data.Match", b =>
-                {
-                    b.HasOne("WebAPI.Data.GameRoom", "Room")
-                        .WithOne("Match")
-                        .HasForeignKey("WebAPI.Data.Match", "RoomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("WebAPI.Data.User", "Winner")
-                        .WithMany()
-                        .HasForeignKey("WinnerId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .WithMany("MatchesAsWinner")
+                        .HasForeignKey("WinnerID");
+
+                    b.Navigation("Player1");
+
+                    b.Navigation("Player2");
 
                     b.Navigation("Room");
 
                     b.Navigation("Winner");
                 });
 
-            modelBuilder.Entity("WebAPI.Data.GameRoom", b =>
+            modelBuilder.Entity("WebAPI.Data.Moves", b =>
                 {
-                    b.Navigation("Match");
+                    b.HasOne("WebAPI.Data.GameMatches", "GameMatch")
+                        .WithMany("Moves")
+                        .HasForeignKey("MatchID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.Navigation("Players");
+                    b.HasOne("WebAPI.Data.User", "Player")
+                        .WithMany()
+                        .HasForeignKey("PlayerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GameMatch");
+
+                    b.Navigation("Player");
+                });
+
+            modelBuilder.Entity("WebAPI.Data.Ranking", b =>
+                {
+                    b.HasOne("WebAPI.Data.User", "User")
+                        .WithOne("Ranking")
+                        .HasForeignKey("WebAPI.Data.Ranking", "UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("WebAPI.Data.Rooms", b =>
+                {
+                    b.HasOne("WebAPI.Data.User", "Owner")
+                        .WithMany("OwnedRooms")
+                        .HasForeignKey("OwnerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("WebAPI.Data.GameMatches", b =>
+                {
+                    b.Navigation("Moves");
+                });
+
+            modelBuilder.Entity("WebAPI.Data.Rooms", b =>
+                {
+                    b.Navigation("Matches");
                 });
 
             modelBuilder.Entity("WebAPI.Data.User", b =>
                 {
-                    b.Navigation("GamePlayers");
+                    b.Navigation("MatchesAsPlayer1");
 
-                    b.Navigation("HostedRooms");
+                    b.Navigation("MatchesAsPlayer2");
+
+                    b.Navigation("MatchesAsWinner");
+
+                    b.Navigation("OwnedRooms");
+
+                    b.Navigation("Ranking");
                 });
 #pragma warning restore 612, 618
         }

@@ -11,47 +11,47 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GamePlayersController : ControllerBase
+    public class RoomsController : ControllerBase
     {
         private readonly CaroDbContext _context;
 
-        public GamePlayersController(CaroDbContext context)
+        public RoomsController(CaroDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/GamePlayers
+        // GET: api/Rooms
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<GamePlayer>>> GetGamePlayers()
+        public async Task<ActionResult<IEnumerable<Rooms>>> GetRooms()
         {
-            return await _context.GamePlayers.ToListAsync();
+            return await _context.Rooms.ToListAsync();
         }
 
-        // GET: api/GamePlayers/5
+        // GET: api/Rooms/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<GamePlayer>> GetGamePlayer(Guid id)
+        public async Task<ActionResult<Rooms>> GetRooms(Guid id)
         {
-            var gamePlayer = await _context.GamePlayers.FindAsync(id);
+            var rooms = await _context.Rooms.FindAsync(id);
 
-            if (gamePlayer == null)
+            if (rooms == null)
             {
                 return NotFound();
             }
 
-            return gamePlayer;
+            return rooms;
         }
 
-        // PUT: api/GamePlayers/5
+        // PUT: api/Rooms/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutGamePlayer(Guid id, GamePlayer gamePlayer)
+        public async Task<IActionResult> PutRooms(Guid id, Rooms rooms)
         {
-            if (id != gamePlayer.Id)
+            if (id != rooms.ID)
             {
                 return BadRequest();
             }
 
-            _context.Entry(gamePlayer).State = EntityState.Modified;
+            _context.Entry(rooms).State = EntityState.Modified;
 
             try
             {
@@ -59,7 +59,7 @@ namespace WebAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!GamePlayerExists(id))
+                if (!RoomsExists(id))
                 {
                     return NotFound();
                 }
@@ -72,36 +72,36 @@ namespace WebAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/GamePlayers
+        // POST: api/Rooms
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<GamePlayer>> PostGamePlayer(GamePlayer gamePlayer)
+        public async Task<ActionResult<Rooms>> PostRooms(Rooms rooms)
         {
-            _context.GamePlayers.Add(gamePlayer);
+            _context.Rooms.Add(rooms);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetGamePlayer", new { id = gamePlayer.Id }, gamePlayer);
+            return CreatedAtAction("GetRooms", new { id = rooms.ID }, rooms);
         }
 
-        // DELETE: api/GamePlayers/5
+        // DELETE: api/Rooms/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteGamePlayer(Guid id)
+        public async Task<IActionResult> DeleteRooms(Guid id)
         {
-            var gamePlayer = await _context.GamePlayers.FindAsync(id);
-            if (gamePlayer == null)
+            var rooms = await _context.Rooms.FindAsync(id);
+            if (rooms == null)
             {
                 return NotFound();
             }
 
-            _context.GamePlayers.Remove(gamePlayer);
+            _context.Rooms.Remove(rooms);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool GamePlayerExists(Guid id)
+        private bool RoomsExists(Guid id)
         {
-            return _context.GamePlayers.Any(e => e.Id == id);
+            return _context.Rooms.Any(e => e.ID == id);
         }
     }
 }
