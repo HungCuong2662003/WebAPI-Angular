@@ -54,9 +54,15 @@ builder.Services.AddAuthentication(options =>
         Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
     };
 });
-
+builder.Services.AddCors(options =>
+{
+	options.AddPolicy("AllowAll",
+		policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
 var app = builder.Build();
 
+
+app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 app.UseSwagger();
 app.UseSwaggerUI();

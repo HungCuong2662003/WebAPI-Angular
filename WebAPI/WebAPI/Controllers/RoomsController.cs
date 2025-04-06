@@ -54,6 +54,79 @@ namespace WebAPI.Controllers
             });
         }
 
+
+        [HttpPost("join/{roomCode}")]
+        public async Task<ActionResult<Rooms>> JoinRoom(string roomCode, [FromBody] JoinRoomRequest request)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == request.UserName);
+
+            if (user == null)
+            {
+                return NotFound(new
+                {
+                    message = "Không tìm thấy người dùng",
+                    status = StatusCodes.Status404NotFound
+                });
+            }
+
+            var room = await _context.Rooms.FirstOrDefaultAsync(r => r.RoomCode == roomCode && r.Status == "waiting");
+
+            if (room == null)
+            {
+                return NotFound(new
+                {
+                    message = "Không tìm thấy phòng",
+                    status = StatusCodes.Status404NotFound
+                });
+            }
+
+            if (!room.IsPublic && room.PasswordRoom != request.Password)
+                return BadRequest(new { message = "Incorrect password" });
+
+            var match = await _context.GameMatches.FirstOrDefaultAsync(m => m.RoomId == room.ID);
+
+            if (match == null)
+            {
+                match = new GameMatches
+                {
+                    RoomId = room.ID,
+                    PlayerXID = user.Id.ToString(),
+                    PlayerOID = null,
+                    CreateAt = DateTime.Now
+                };
+
+                _context.GameMatches.Add(match);
+                await _context.SaveChangesAsync();
+                return Ok(new
+                {
+                    message = "Tham gia phòng thành công",
+                    data = room,
+                    status = StatusCodes.Status200OK
+                });
+            }
+
+
+            if (match.PlayerXID != null && match.PlayerOID == null)
+            {
+                match.PlayerOID = user.Id.ToString();
+                room.Status = "playing";
+                _context.GameMatches.Update(match);
+                await _context.SaveChangesAsync();
+                return Ok(new
+                {
+                    message = "Tham gia phòng thành công",
+                    data = room,
+                    status = StatusCodes.Status200OK
+                });
+            }
+
+            return BadRequest(new
+            {
+                message = "Phòng đã đầy",
+                status = StatusCodes.Status400BadRequest
+            });
+        }
+
         // PUT: api/Rooms/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

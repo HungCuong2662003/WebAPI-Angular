@@ -36,6 +36,67 @@
         }
       }
     },
+    "/api/Auth/{id}": {
+      "put": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Auth/SignIn": {
       "post": {
         "tags": [
@@ -437,191 +498,6 @@
         }
       }
     },
-    "/api/Rankings": {
-      "get": {
-        "tags": [
-          "Rankings"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Ranking"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Ranking"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Ranking"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Rankings"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Ranking"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Ranking"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Ranking"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Ranking"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Ranking"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Ranking"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Rankings/{id}": {
-      "get": {
-        "tags": [
-          "Rankings"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Ranking"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Ranking"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Ranking"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Rankings"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Ranking"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Ranking"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Ranking"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Rankings"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Rooms": {
       "get": {
         "tags": [
@@ -807,6 +683,64 @@
         }
       }
     },
+    "/api/Rooms/join/{roomCode}": {
+      "post": {
+        "tags": [
+          "Rooms"
+        ],
+        "parameters": [
+          {
+            "name": "roomCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JoinRoomRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JoinRoomRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/JoinRoomRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rooms"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rooms"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rooms"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/User": {
       "get": {
         "tags": [
@@ -899,8 +833,8 @@
     "schemas": {
       "GameMatches": {
         "required": [
-          "player1ID",
-          "player2ID",
+          "playerOID",
+          "playerXID",
           "roomId"
         ],
         "type": "object",
@@ -913,39 +847,41 @@
             "type": "string",
             "format": "uuid"
           },
-          "room": {
-            "$ref": "#/components/schemas/Rooms"
-          },
-          "player1ID": {
+          "playerXID": {
             "minLength": 1,
             "type": "string"
           },
-          "player1": {
-            "$ref": "#/components/schemas/User"
-          },
-          "player2ID": {
+          "playerOID": {
             "minLength": 1,
             "type": "string"
-          },
-          "player2": {
-            "$ref": "#/components/schemas/User"
           },
           "winnerID": {
             "type": "string",
             "nullable": true
-          },
-          "winner": {
-            "$ref": "#/components/schemas/User"
-          },
-          "createAt": {
-            "type": "string",
-            "format": "date-time"
           },
           "moves": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Moves"
             },
+            "nullable": true
+          },
+          "createAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "JoinRoomRequest": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -975,9 +911,6 @@
             "minLength": 1,
             "type": "string"
           },
-          "player": {
-            "$ref": "#/components/schemas/User"
-          },
           "x": {
             "type": "integer",
             "format": "int32"
@@ -993,49 +926,10 @@
         },
         "additionalProperties": false
       },
-      "Ranking": {
-        "required": [
-          "draw",
-          "eloRating",
-          "lose",
-          "userID",
-          "win"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "userID": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          },
-          "win": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "lose": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "draw": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "eloRating": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
       "Rooms": {
         "required": [
           "isPublic",
+          "maxPlayers",
           "ownerID",
           "roomCode",
           "status"
@@ -1059,12 +953,23 @@
             "$ref": "#/components/schemas/User"
           },
           "passwordRoom": {
-            "maxLength": 50,
+            "maxLength": 6,
             "type": "string",
             "nullable": true
           },
           "isPublic": {
             "type": "boolean"
+          },
+          "players": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "maxPlayers": {
+            "type": "integer",
+            "format": "int32"
           },
           "status": {
             "maxLength": 50,
@@ -1108,13 +1013,13 @@
         "required": [
           "confirmPass",
           "email",
-          "firtname",
+          "firstname",
           "lastname",
           "password"
         ],
         "type": "object",
         "properties": {
-          "firtname": {
+          "firstname": {
             "minLength": 1,
             "type": "string"
           },
@@ -1198,7 +1103,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "firtname": {
+          "firstname": {
             "type": "string",
             "nullable": true
           },
@@ -1210,40 +1115,21 @@
             "type": "integer",
             "format": "int32"
           },
+          "win": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lose": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "draw": {
+            "type": "integer",
+            "format": "int32"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
-          },
-          "ownedRooms": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Rooms"
-            },
-            "nullable": true
-          },
-          "matchesAsPlayer1": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GameMatches"
-            },
-            "nullable": true
-          },
-          "matchesAsPlayer2": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GameMatches"
-            },
-            "nullable": true
-          },
-          "matchesAsWinner": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GameMatches"
-            },
-            "nullable": true
-          },
-          "ranking": {
-            "$ref": "#/components/schemas/Ranking"
           }
         },
         "additionalProperties": false

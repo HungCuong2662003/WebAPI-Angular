@@ -164,29 +164,23 @@ namespace WebAPI.Migrations
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Player1ID")
+                    b.Property<string>("PlayerOID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Player2ID")
+                    b.Property<string>("PlayerXID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("RoomId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("WinnerID")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("Player1ID");
-
-                    b.HasIndex("Player2ID");
-
                     b.HasIndex("RoomId");
-
-                    b.HasIndex("WinnerID");
 
                     b.ToTable("GameMatches");
                 });
@@ -205,7 +199,7 @@ namespace WebAPI.Migrations
 
                     b.Property<string>("PlayerID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("X")
                         .HasColumnType("int");
@@ -217,39 +211,7 @@ namespace WebAPI.Migrations
 
                     b.HasIndex("MatchID");
 
-                    b.HasIndex("PlayerID");
-
                     b.ToTable("Moves");
-                });
-
-            modelBuilder.Entity("WebAPI.Data.Ranking", b =>
-                {
-                    b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Draw")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EloRating")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Lose")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("Win")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("UserID")
-                        .IsUnique();
-
-                    b.ToTable("Ranking");
                 });
 
             modelBuilder.Entity("WebAPI.Data.Rooms", b =>
@@ -264,13 +226,19 @@ namespace WebAPI.Migrations
                     b.Property<bool>("IsPublic")
                         .HasColumnType("bit");
 
+                    b.Property<int>("MaxPlayers")
+                        .HasColumnType("int");
+
                     b.Property<string>("OwnerID")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("PasswordRoom")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<string>("Players")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RoomCode")
                         .IsRequired()
@@ -304,6 +272,9 @@ namespace WebAPI.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("Draw")
+                        .HasColumnType("int");
+
                     b.Property<int>("EloRating")
                         .HasColumnType("int");
 
@@ -314,7 +285,7 @@ namespace WebAPI.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Firtname")
+                    b.Property<string>("Firstname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -327,6 +298,9 @@ namespace WebAPI.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<int>("Lose")
+                        .HasColumnType("int");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -354,6 +328,9 @@ namespace WebAPI.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<int>("Win")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -421,35 +398,11 @@ namespace WebAPI.Migrations
 
             modelBuilder.Entity("WebAPI.Data.GameMatches", b =>
                 {
-                    b.HasOne("WebAPI.Data.User", "Player1")
-                        .WithMany("MatchesAsPlayer1")
-                        .HasForeignKey("Player1ID")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("WebAPI.Data.User", "Player2")
-                        .WithMany("MatchesAsPlayer2")
-                        .HasForeignKey("Player2ID")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("WebAPI.Data.Rooms", "Room")
+                    b.HasOne("WebAPI.Data.Rooms", null)
                         .WithMany("Matches")
                         .HasForeignKey("RoomId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("WebAPI.Data.User", "Winner")
-                        .WithMany("MatchesAsWinner")
-                        .HasForeignKey("WinnerID");
-
-                    b.Navigation("Player1");
-
-                    b.Navigation("Player2");
-
-                    b.Navigation("Room");
-
-                    b.Navigation("Winner");
                 });
 
             modelBuilder.Entity("WebAPI.Data.Moves", b =>
@@ -457,37 +410,18 @@ namespace WebAPI.Migrations
                     b.HasOne("WebAPI.Data.GameMatches", "GameMatch")
                         .WithMany("Moves")
                         .HasForeignKey("MatchID")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("WebAPI.Data.User", "Player")
-                        .WithMany()
-                        .HasForeignKey("PlayerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("GameMatch");
-
-                    b.Navigation("Player");
-                });
-
-            modelBuilder.Entity("WebAPI.Data.Ranking", b =>
-                {
-                    b.HasOne("WebAPI.Data.User", "User")
-                        .WithOne("Ranking")
-                        .HasForeignKey("WebAPI.Data.Ranking", "UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("WebAPI.Data.Rooms", b =>
                 {
                     b.HasOne("WebAPI.Data.User", "Owner")
-                        .WithMany("OwnedRooms")
+                        .WithMany()
                         .HasForeignKey("OwnerID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Owner");
@@ -501,19 +435,6 @@ namespace WebAPI.Migrations
             modelBuilder.Entity("WebAPI.Data.Rooms", b =>
                 {
                     b.Navigation("Matches");
-                });
-
-            modelBuilder.Entity("WebAPI.Data.User", b =>
-                {
-                    b.Navigation("MatchesAsPlayer1");
-
-                    b.Navigation("MatchesAsPlayer2");
-
-                    b.Navigation("MatchesAsWinner");
-
-                    b.Navigation("OwnedRooms");
-
-                    b.Navigation("Ranking");
                 });
 #pragma warning restore 612, 618
         }

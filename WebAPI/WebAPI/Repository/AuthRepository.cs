@@ -63,7 +63,7 @@ namespace WebAPI.Repository
         {
             var user = new User
             {
-                Firtname = model.Firtname,
+                Firstname = model.Firstname,
                 Lastname = model.Lastname,
                 Email = model.Email,
                 UserName = model.Email

@@ -19,15 +19,12 @@ namespace WebAPI.Data
 		[Required]
 		public string PlayerID { get; set; }
 
-		[ForeignKey("PlayerID")]
-		public User? Player { get; set; }
-
 		[Required]
 		public int X { get; set; }
 
 		[Required]
 		public int Y { get; set; }
-
+		
 		public DateTime CreateAt { get; set; } = DateTime.Now;
 	}
 }

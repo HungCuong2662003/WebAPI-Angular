@@ -20,13 +20,20 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUserSortByEloRating()
         {
-            return await _context.Users.OrderByDescending(u => u.EloRating).ToListAsync();
+            // sắp xếp người dùng theo EloRating giảm dần, win, lost, draw
+            var users = await _context.Users.OrderByDescending(u => u.EloRating).ThenByDescending(u => u.Win).ThenBy(u => u.Lose).ThenBy(u => u.Draw).ToListAsync();
+            return Ok(new
+            {
+                message = "Lấy danh sách người dùng thành công",
+                data = users,
+                status = StatusCodes.Status200OK
+            });
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<IEnumerable<User>>> GetUserById(Guid id)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = await _context.Users.FindAsync(id.ToString());
 
             if (user == null)
             {

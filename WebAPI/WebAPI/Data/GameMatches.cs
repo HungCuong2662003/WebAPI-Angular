@@ -12,33 +12,17 @@ namespace WebAPI.Data
 		[Required]
 		public Guid RoomId { get; set; }
 
-		[ForeignKey("RoomId")]
-		public Rooms? Room { get; set; }
+		[Required]
+		public string PlayerXID { get; set; }
 
 		[Required]
-		public string Player1ID { get; set; }
+		public string PlayerOID { get; set; }
 
-		[ForeignKey("Player1ID")]
-		[InverseProperty("MatchesAsPlayer1")]
-		public User? Player1 { get; set; }
-
-		[Required]
-		public string Player2ID { get; set; }
-
-		[ForeignKey("Player2ID")]
-		[InverseProperty("MatchesAsPlayer2")]
-		public User? Player2 { get; set; }
-
-		// WinnerID có thể null khi trận đấu chưa có người chiến thắng.
 		public string? WinnerID { get; set; }
 
-		[ForeignKey("WinnerID")]
-		[InverseProperty("MatchesAsWinner")]
-		public User? Winner { get; set; }
-
+		public List<Moves>? Moves { get; set; } = new List<Moves>();
 		public DateTime CreateAt { get; set; } = DateTime.Now;
 
 		// Navigation property
-		public ICollection<Moves>? Moves { get; set; }
 	}
 }

@@ -11,28 +11,28 @@ namespace WebAPI.Data
 		public DbSet<Rooms> Rooms { get; set; }
 		public DbSet<GameMatches> GameMatches { get; set; }
 		public DbSet<Moves> Moves { get; set; }
-		public DbSet<Ranking> Ranking { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
-			modelBuilder.Entity<Moves>()
-				.HasOne(m => m.GameMatch)
-				.WithMany(g => g.Moves)
+
+			modelBuilder.Entity<GameMatches>()
+				.HasOne<Rooms>()
+				.WithMany(r => r.Matches)
+				.HasForeignKey(gm => gm.RoomId)
+				.OnDelete(DeleteBehavior.Cascade);
+
+			modelBuilder.Entity<GameMatches>()
+				.HasMany(gm => gm.Moves)
+				.WithOne(m => m.GameMatch)
 				.HasForeignKey(m => m.MatchID)
-				.OnDelete(DeleteBehavior.Restrict);
-			modelBuilder.Entity<GameMatches>()
-				.HasOne(g => g.Player1)
-				.WithMany(u => u.MatchesAsPlayer1)
-				.HasForeignKey(g => g.Player1ID)
-				.OnDelete(DeleteBehavior.Restrict);
+				.OnDelete(DeleteBehavior.Cascade);
 
-			modelBuilder.Entity<GameMatches>()
-				.HasOne(g => g.Player2)
-				.WithMany(u => u.MatchesAsPlayer2)
-				.HasForeignKey(g => g.Player2ID)
+			modelBuilder.Entity<Rooms>()
+				.HasOne(r => r.Owner)
+				.WithMany()
+				.HasForeignKey(r => r.OwnerID)
 				.OnDelete(DeleteBehavior.Restrict);
-
 		}
 	}
 
