@@ -64,7 +64,7 @@ namespace WebAPI.Controllers
             var profile = new
             {
                 user.Id,
-                user.Firtname,
+                user.Firstname,
                 user.Lastname,
                 user.Email,
                 user.EloRating

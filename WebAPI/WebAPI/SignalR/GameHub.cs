@@ -63,7 +63,7 @@ public class GameHub : Hub
             var winner = await _context.Users
                 .FirstOrDefaultAsync(u => u.Id.ToString() == winnerId);
 
-            string fullName = $"{winner.Firtname} {winner.Lastname}";
+            string fullName = $"{winner.Firstname} {winner.Lastname}";
 
             // Gửi cả ID và tên về client
             await Clients.Group(roomId).SendAsync("GameOver", new
@@ -148,6 +148,7 @@ public class GameHub : Hub
         if (match != null)
         {
             match.WinnerID = null;
+          
             _context.Moves.RemoveRange(match.Moves); // Xoá nước đi cũ
             await _context.SaveChangesAsync();
         }
