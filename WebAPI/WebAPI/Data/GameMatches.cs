@@ -28,9 +28,9 @@ namespace WebAPI.Data
 		[ForeignKey("Player2ID")]
 		[InverseProperty("MatchesAsPlayer2")]
 		public User? Player2 { get; set; }
-
-		// WinnerID có thể null khi trận đấu chưa có người chiến thắng.
-		public string? WinnerID { get; set; }
+        public string? NextTurnPlayerID { get; set; }
+        // WinnerID có thể null khi trận đấu chưa có người chiến thắng.
+        public string? WinnerID { get; set; }
 
 		[ForeignKey("WinnerID")]
 		[InverseProperty("MatchesAsWinner")]

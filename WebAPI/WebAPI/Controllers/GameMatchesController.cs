@@ -103,6 +103,7 @@ namespace WebAPI.Controllers
 
             return CreatedAtAction("GetGameMatches", new { id = gameMatches.ID }, gameMatches);
         }
+
         public class StartMatchRequest
         {
             public Guid RoomId { get; set; }
@@ -121,31 +122,35 @@ namespace WebAPI.Controllers
             if (players.Count < 2)
                 return BadRequest("Phòng chưa đủ 2 người để bắt đầu trận đấu.");
 
-            //var existingMatch = await _context.GameMatches.FirstOrDefaultAsync(m => m.RoomId == roomId);
-            //if (existingMatch != null)
-            //    return BadRequest("Trận đấu đã được khởi tạo.");
-
             var match = new GameMatches
             {
                 ID = Guid.NewGuid(),
                 RoomId = roomId,
                 Player1ID = players[0],
                 Player2ID = players[1],
+                NextTurnPlayerID = players[0], // 👈 Bắt đầu từ Player1
                 CreateAt = DateTime.Now
             };
 
-            // Gửi matchId về tất cả client trong room
-            await _hubContext.Clients.Group(gameMatcheModel.RoomId.ToString())
-                .SendAsync("MatchStarted", match.ID);
             _context.GameMatches.Add(match);
             await _context.SaveChangesAsync();
+
+            await _hubContext.Clients.Group(roomId.ToString())
+                .SendAsync("MatchStarted", new
+                {
+                    matchId = match.ID,
+                    player1 = match.Player1ID,
+                    player2 = match.Player2ID,
+                    nextTurn = match.NextTurnPlayerID
+                });
 
             return Ok(new
             {
                 message = "Trận đấu đã bắt đầu.",
                 matchId = match.ID,
                 player1 = match.Player1ID,
-                player2 = match.Player2ID
+                player2 = match.Player2ID,
+                nextTurn = match.NextTurnPlayerID
             });
         }
 
