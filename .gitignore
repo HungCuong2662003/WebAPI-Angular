@@ -4,3 +4,10 @@
 
 /WebAPI/.vs/WebAPI/FileContentIndex
 WebAPI/obj/
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.db
+*.cache
