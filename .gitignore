@@ -3,7 +3,9 @@
 ################################################################################
 
 /WebAPI/.vs/WebAPI/FileContentIndex
-WebAPI/obj/
+WebAPI/publish/
+WebAPI/WebAPI/bin/
+WebAPI/WebAPI/obj/
 .vs/
 bin/
 obj/
