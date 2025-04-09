@@ -25,22 +25,37 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<RoomPlayers>>> GetRoomPlayers()
         {
-            return await _context.RoomPlayers.ToListAsync();
+            var players = await _context.RoomPlayers.ToListAsync();
+            return Ok(new
+            {
+                status = 200,
+                message = "Successfully retrieved room players",
+                data = players
+            });
         }
-
         // GET: api/RoomPlayers/5
         [HttpGet("{id}")]
         public async Task<ActionResult<RoomPlayers>> GetRoomPlayers(Guid id)
         {
-            var roomPlayers = await _context.RoomPlayers.FindAsync(id);
+            var roomPlayer = await _context.RoomPlayers.FindAsync(id);
 
-            if (roomPlayers == null)
+            if (roomPlayer == null)
             {
-                return NotFound();
+                return NotFound(new
+                {
+                    status = 404,
+                    message = "RoomPlayer not found"
+                });
             }
 
-            return roomPlayers;
+            return Ok(new
+            {
+                status = 200,
+                message = "RoomPlayer found",
+                data = roomPlayer
+            });
         }
+
 
         // PUT: api/RoomPlayers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -163,8 +178,13 @@ namespace WebAPI.Controllers
             _context.Rooms.Update(room);
             await _context.SaveChangesAsync();
 
-            // Trả về response thành công
-            return CreatedAtAction(nameof(GetRoomPlayers), new { id = roomPlayers.Id }, roomPlayers);
+         
+            return CreatedAtAction(nameof(GetRoomPlayers), new { id = roomPlayers.Id }, new
+            {
+                Status = 201,
+                Message = "Player joined the room successfully.",
+                Data = roomPlayers
+            });
         }
         [HttpPost("joinpass")]
         public async Task<ActionResult<RoomPlayers>> PostRoomPlayerspass(RoomPlayerModel RoomPlayerModel,  string pass)
@@ -214,8 +234,15 @@ namespace WebAPI.Controllers
             _context.Rooms.Update(room);
             await _context.SaveChangesAsync();
 
+     
+            return CreatedAtAction(nameof(GetRoomPlayers), new { id = roomPlayers.Id }, new
+            {
+                Status = 201,
+                Message = "Player joined the room successfully.",
+                Data = roomPlayers
+            });
            
-            return CreatedAtAction(nameof(GetRoomPlayers), new { id = roomPlayers.Id }, roomPlayers);
+                   
         }
      
         [HttpPost("out")]
@@ -225,7 +252,12 @@ namespace WebAPI.Controllers
             var room = await _context.Rooms.FirstOrDefaultAsync(r => r.ID == RoomPlayerModel.RoomId);
             if (room == null)
             {
-                return NotFound("Room not found");
+            
+                return NotFound(new
+                {
+                    status = 404,
+                    message = "Room not found"
+                });
             }
 
             // Tìm người chơi trong phòng
@@ -257,7 +289,11 @@ namespace WebAPI.Controllers
             await _context.SaveChangesAsync();
 
             // Trả về phản hồi thành công
-            return NoContent(); // hoặc return Ok(new { message = "Player removed from room" });
+            return Ok(new
+            {
+                status = 200,
+                message = "Player removed from room successfully"
+            });
         }
 
     }
