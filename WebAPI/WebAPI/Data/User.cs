@@ -5,7 +5,7 @@ namespace WebAPI.Data
 {
     public class User : IdentityUser
     {
-      public string Firtname { get; set; } = string.Empty;
+      public string Firstname { get; set; } = string.Empty;
       public string Lastname { get; set; } = string.Empty;
 		public int EloRating { get; set; } = 1000;
 		public DateTime CreatedAt { get; set; } = DateTime.Now;
