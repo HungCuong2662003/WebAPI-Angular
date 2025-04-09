@@ -1,0 +1,16 @@
+<div class="create-room-btn">
+  <button class="btn btn-success" (click)="CreateRoom()">+ Tạo phòng</button>
+</div>
+<div class="room-container">
+  
+  <div *ngFor="let room of DSRoom" class="room-card" [ngClass]="room.status ? 'waiting' : 'playing'" (click)="selectRoom(room)" (contextmenu)="onRightClick($event, room)">
+    <img src="assets/phong.png" class="room-image" />
+    <p class="room-code">{{ room.roomCode || 'Bàn không tên' }}</p>
+    <p class="room-status">
+      {{ room.status ? '🟡 Chờ người chơi' : '🟢 Đang chơi' }}
+    </p>
+    <!-- Thêm nút vào phòng ở đây -->
+    <button *ngIf="selectedRoom === room" (click)="joinRoom(room)" class="btn btn-primary">Vào phòng</button>
+  </div>
+</div>
+

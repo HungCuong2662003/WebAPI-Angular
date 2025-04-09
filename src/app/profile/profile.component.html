@@ -1,0 +1,16 @@
+<div *ngIf="profile" class="container mt-4">
+  <div class="card shadow-lg mx-auto" style="max-width: 500px;">
+    <div class="card-header bg-primary text-white text-center">
+      <h4 class="mb-0">Thông tin cá nhân</h4>
+    </div>
+    <div class="card-body">
+      <p><strong>Họ:</strong> {{ profile.firtname }}</p>
+      <p><strong>Tên:</strong> {{ profile.lastname }}</p>
+      <p><strong>Email:</strong> {{ profile.email }}</p>
+      <p><strong>Điểm xếp hạng:</strong> {{  profile.eloRating }}</p>
+    </div>
+    <div class="card-footer text-center">
+      <button (click)="logout()" class="btn btn-danger">Đăng xuất</button>
+    </div>
+  </div>
+</div>

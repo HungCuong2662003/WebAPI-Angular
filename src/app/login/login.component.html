@@ -1,0 +1,31 @@
+<div class="login-container">
+  <h2>Đăng nhập</h2>
+
+  <form (submit)="signIn()" #loginForm="ngForm">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      [(ngModel)]="user.Email"
+      name="Email"
+      placeholder="Nhập email"
+      required
+    />
+
+    <label for="password">Mật khẩu</label>
+    <input
+      id="password"
+      type="password"
+      [(ngModel)]="user.Password"
+      name="Password"
+      placeholder="Nhập mật khẩu"
+      required
+    />
+
+    <button type="submit" [disabled]="!loginForm.form.valid">Đăng nhập</button>
+  </form>
+
+  <p class="message" [ngClass]="{ success: message === 'Đăng nhập thành công!', error: message !== 'Đăng nhập thành công!' }">
+    {{ message }}
+  </p>
+</div>

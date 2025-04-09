@@ -1,0 +1,23 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>STT</th> <!-- Cột STT -->
+      <th>Tên người dùng</th>
+      <th>Email</th>
+      <!-- <th>Hành động</th> -->
+       <th>Điểm xếp hạng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of DSUser; let i = index">
+      <td>{{ i + 1 }}</td> <!-- Hiển thị STT -->
+      <td>{{ user.firtname }} {{ user.lastname }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.eloRating }}</td>
+      <!-- <td>
+        <button type="button" class="btn btn-light mr-1">Sửa</button>
+        <button type="button" class="btn btn-light mr-1">Xóa</button>
+      </td> -->
+    </tr>
+  </tbody>
+</table>

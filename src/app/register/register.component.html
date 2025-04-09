@@ -1,0 +1,11 @@
+<form (submit)="signUp()">
+    <input type="text" [(ngModel)]="user.Firstname" name="Firstname" placeholder="Họ" required>
+    <input type="text" [(ngModel)]="user.Lastname" name="Lastname" placeholder="Tên" required>
+    <input type="email" [(ngModel)]="user.Email" name="Email" placeholder="Email" required>
+    <input type="password" [(ngModel)]="user.Password" name="Password" placeholder="Mật khẩu" required>
+    <input type="password" [(ngModel)]="user.ConfirmPass" name="ConfirmPass" placeholder="Xác nhận mật khẩu" required>
+    <button type="submit">Đăng Ký</button>
+    
+  </form>
+  <p>{{ message }}</p>
+  

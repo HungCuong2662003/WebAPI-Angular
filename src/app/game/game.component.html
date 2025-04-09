@@ -1,0 +1,30 @@
+<div class="game-container">
+  <!-- Nút điều khiển game -->
+  <div class="game-controls">
+    <button (click)="startGame()">Bắt đầu trò chơi</button>
+    <button (click)="leaveRoom()">Rời phòng</button>
+    <button (click)="resetGame()">Chơi lại</button>
+ 
+  </div>
+  <!-- Hiển thị thông tin người chơi hiện tại -->
+  <div class="game-info">
+    <h2>{{ currentPlayer }}'s Turn</h2>
+    <h3 *ngIf="gameOver">Game Over! Winner: {{ winner }}</h3>
+  </div>
+
+  <!-- Hiển thị bảng cờ -->
+  <div class="board">
+    <div *ngFor="let row of board; let i = index" class="board-row">
+      <div *ngFor="let cell of row; let j = index" class="board-cell"
+           [ngClass]="{'x': cell === 'X', 'o': cell === 'O'}"
+           (click)="makeMove(i, j)">
+        {{ cell }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Nút reset game nếu cần -->
+  <div *ngIf="gameOver">
+    <button (click)="resetGame()">Play Again</button>
+  </div>
+</div>

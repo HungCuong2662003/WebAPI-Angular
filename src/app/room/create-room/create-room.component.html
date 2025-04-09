@@ -1,0 +1,55 @@
+<!-- src/app/create-room/create-room.component.html -->
+<div class="container">
+  <form [formGroup]="roomForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="roomCode">Mã phòng</label>
+      <input type="text" id="roomCode" formControlName="roomCode" class="form-control" />
+      <div *ngIf="roomForm.get('roomCode')?.invalid && roomForm.get('roomCode')?.touched" class="text-danger">
+        <div *ngIf="roomForm.get('roomCode')?.errors?.['required']">
+          Mã phòng là bắt buộc.
+        </div>
+        <div *ngIf="roomForm.get('roomCode')?.errors?.['maxlength']">
+          Mã phòng phải ít hơn 10 ký tự.
+        </div>
+      </div>
+    </div>
+
+    <!-- Phòng công khai -->
+    <div class="form-check">
+      <input 
+        type="checkbox" 
+        id="isPublic" 
+        formControlName="isPublic" 
+        class="form-check-input" />
+      <label class="form-check-label" for="isPublic">Công khai</label>
+    </div>
+
+    <!-- Mật khẩu phòng chỉ hiển thị nếu phòng không công khai -->
+    <div class="form-group" *ngIf="!roomForm.get('isPublic')?.value">
+      <label for="passwordRoom">Mật khẩu</label>
+      <input type="text" id="passwordRoom" formControlName="passwordRoom" class="form-control" />
+      <div *ngIf="roomForm.get('passwordRoom')?.invalid && roomForm.get('passwordRoom')?.touched" class="text-danger">
+        Mật khẩu là bắt buộc cho phòng riêng tư.
+      </div>
+    </div>
+
+    <!-- Trạng thái phòng -->
+    <div class="form-group">
+      <label for="status">Trạng thái</label>
+      <select id="status" formControlName="status" class="form-control">
+        <option [ngValue]="true">Kích hoạt</option>
+        <option [ngValue]="false">Không kích hoạt</option>
+      </select>
+    </div>
+
+    <!-- Nút submit -->
+    <button type="submit" [disabled]="roomForm.invalid || loading" class="btn btn-primary">Tạo phòng</button>
+  </form>
+  
+  <!-- ✅ Hiển thị Room ID sau khi tạo thành công -->
+  <div *ngIf="createdRoomId" class="room-id-notify mt-3">
+    <p>Tạo phòng thành công! Room ID của bạn là: <strong>{{ createdRoomId }}</strong></p>
+    <button (click)="copyToClipboard(createdRoomId)" class="btn btn-outline-success">📋 Sao chép Room ID</button>
+  </div>
+</div>
+
