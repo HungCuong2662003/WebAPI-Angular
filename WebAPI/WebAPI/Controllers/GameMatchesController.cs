@@ -24,7 +24,15 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GameMatches>>> GetGameMatches()
         {
-            return await _context.GameMatches.ToListAsync();
+            return Ok(
+                new
+                {
+                    message = "Lấy danh sách trận đấu thành công",
+                    totalRows = _context.GameMatches.Count(),
+                    data = await _context.GameMatches.ToListAsync(),
+                    status = StatusCodes.Status200OK
+                }
+            );
         }
 
         // GET: api/GameMatches/5
@@ -38,7 +46,35 @@ namespace WebAPI.Controllers
                 return NotFound();
             }
 
-            return gameMatches;
+            return Ok(
+                new
+                {
+                    message = "Lấy thông tin trận đấu thành công",
+                    data = gameMatches,
+                    status = StatusCodes.Status200OK
+                }
+            );
+        }
+
+        // Xem danh sách trận đấu theo ID người chơi
+        [HttpGet("User/{userId}")]
+        public async Task<ActionResult<IEnumerable<GameMatches>>> GetGameMatchesByUserId(String userId)
+        {
+            var gameMatches = await _context.GameMatches.Where(x => x.PlayerOID == userId || x.PlayerXID == userId).ToListAsync();
+
+            if (gameMatches == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(
+                new
+                {
+                    message = "Lấy danh sách trận đấu theo ID người chơi thành công",
+                    data = gameMatches,
+                    status = StatusCodes.Status200OK
+                }
+            );
         }
 
         // PUT: api/GameMatches/5

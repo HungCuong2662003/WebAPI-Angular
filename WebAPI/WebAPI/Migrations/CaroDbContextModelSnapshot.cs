@@ -237,9 +237,6 @@ namespace WebAPI.Migrations
                         .HasMaxLength(6)
                         .HasColumnType("nvarchar(6)");
 
-                    b.Property<string>("Players")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("RoomCode")
                         .IsRequired()
                         .HasMaxLength(10)
@@ -319,6 +316,9 @@ namespace WebAPI.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<Guid?>("RoomsID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -341,6 +341,8 @@ namespace WebAPI.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.HasIndex("RoomsID");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -427,6 +429,13 @@ namespace WebAPI.Migrations
                     b.Navigation("Owner");
                 });
 
+            modelBuilder.Entity("WebAPI.Data.User", b =>
+                {
+                    b.HasOne("WebAPI.Data.Rooms", null)
+                        .WithMany("Players")
+                        .HasForeignKey("RoomsID");
+                });
+
             modelBuilder.Entity("WebAPI.Data.GameMatches", b =>
                 {
                     b.Navigation("Moves");
@@ -435,6 +444,8 @@ namespace WebAPI.Migrations
             modelBuilder.Entity("WebAPI.Data.Rooms", b =>
                 {
                     b.Navigation("Matches");
+
+                    b.Navigation("Players");
                 });
 #pragma warning restore 612, 618
         }

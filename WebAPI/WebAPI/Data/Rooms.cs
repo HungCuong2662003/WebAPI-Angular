@@ -27,7 +27,7 @@ namespace WebAPI.Data
 		public bool IsPublic { get; set; } = true;
 
 		// danh sách người chơi trong phòng
-		public List<string>? Players { get; set; } = new List<string>();
+		public List<User>? Players { get; set; } = new List<User>();
 		// số người chơi tối đa trong phòng
 		[Required]
 		public int MaxPlayers { get; set; } = 2;

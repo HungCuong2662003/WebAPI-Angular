@@ -71,6 +71,27 @@ namespace WebAPI.Controllers
             return NoContent();
         }
 
+        // danh sach nước đi theo trận đấu
+        [HttpGet("Match/{matchId}")]
+        public async Task<ActionResult<IEnumerable<Moves>>> GetMovesByGameId(Guid matchId)
+        {
+            var moves = await _context.Moves.Where(x => x.MatchID == matchId).ToListAsync();
+
+            if (moves == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(
+                new
+                {
+                    message = "Lấy danh sách nước đi theo ID trận đấu thành công",
+                    data = moves,
+                    status = StatusCodes.Status200OK
+                }
+            );
+        }
+
         // POST: api/Moves
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
