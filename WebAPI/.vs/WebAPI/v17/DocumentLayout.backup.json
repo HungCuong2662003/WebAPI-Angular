@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "D:\\Caro\\WebAPI\\WebAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\signalr\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\signalr\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\model\\signupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\signupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\model\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\roomplayerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\roomplayerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\roomplayers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\roomplayers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\gamematchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\gamematchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\movescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\movescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\roomplayers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\roomplayers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\movescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\movescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\gamematches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,20 +71,12 @@
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\properties\\publishprofiles\\folderprofile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\signalr\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\signalr\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\moves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\moves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\model\\gamematchemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\gamematchemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\data\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Properties\\PublishProfiles\\FolderProfile.pubxml.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -82,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,67 +102,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "SignUpModel.cs",
+              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Model\\SignUpModel.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Model\\SignUpModel.cs",
+              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Model\\SignUpModel.cs",
+              "RelativeToolTip": "WebAPI\\Model\\SignUpModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T02:43:10.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "RoomsController.cs",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\RoomsController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\RoomsController.cs",
               "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\RoomsController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\RoomsController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwE8AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T09:21:55.46Z"
+              "WhenOpened": "2025-04-06T09:21:55.46Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameMatchesController.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\GameMatchesController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\GameMatchesController.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\GameMatchesController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\GameMatchesController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAYwGkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T01:51:16.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\UserController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T01:00:13.924Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Moves.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\Moves.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Data\\Moves.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\Moves.cs",
-              "RelativeToolTip": "WebAPI\\Data\\Moves.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T03:00:04.845Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 0,
               "Title": "GameHub.cs",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\SignalR\\GameHub.cs",
               "RelativeDocumentMoniker": "WebAPI\\SignalR\\GameHub.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\SignalR\\GameHub.cs",
-              "RelativeToolTip": "WebAPI\\SignalR\\GameHub.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAxwBsAAAALAAAAAAAAAA==",
+              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\SignalR\\GameHub.cs*",
+              "RelativeToolTip": "WebAPI\\SignalR\\GameHub.cs*",
+              "ViewState": "AgIAAEsAAAAAAAAAAADwv3IAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T23:16:57.756Z"
+              "WhenOpened": "2025-04-06T23:16:57.756Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "WebAPI\\Program.cs",
@@ -166,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "WebAPI\\Properties\\launchSettings.json",
@@ -178,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "GameMatches.cs",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\GameMatches.cs",
               "RelativeDocumentMoniker": "WebAPI\\Data\\GameMatches.cs",
@@ -190,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "MovesController.cs",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\MovesController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\MovesController.cs",
@@ -202,20 +189,96 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "RoomPlayersController.cs",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\RoomPlayersController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\RoomPlayersController.cs",
               "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\RoomPlayersController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\RoomPlayersController.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAArwKkAAABYAAAAAAAAAA==",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAuwK8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-06T09:21:57.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAwwIMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T01:08:47.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Rooms.cs",
+              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\Rooms.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\Rooms.cs",
+              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\Rooms.cs",
+              "RelativeToolTip": "WebAPI\\Data\\Rooms.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T02:07:46.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameMatchesController.cs",
+              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\GameMatchesController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\GameMatchesController.cs",
+              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\GameMatchesController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\GameMatchesController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAIwGgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T01:51:16.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SignInModel.cs",
+              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Model\\SignInModel.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Model\\SignInModel.cs",
+              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Model\\SignInModel.cs",
+              "RelativeToolTip": "WebAPI\\Model\\SignInModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T01:46:44.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Moves.cs",
+              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\Moves.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\Moves.cs",
+              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\Moves.cs",
+              "RelativeToolTip": "WebAPI\\Data\\Moves.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T03:00:04.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T01:00:13.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "RoomPlayers.cs",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\RoomPlayers.cs",
               "RelativeDocumentMoniker": "WebAPI\\Data\\RoomPlayers.cs",
@@ -227,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\appsettings.json",
               "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
@@ -239,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "WebAPI.http",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\WebAPI.http",
               "RelativeDocumentMoniker": "WebAPI\\WebAPI.http",
@@ -251,19 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T01:08:47.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "FolderProfile.pubxml",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Properties\\PublishProfiles\\FolderProfile.pubxml",
               "RelativeDocumentMoniker": "WebAPI\\Properties\\PublishProfiles\\FolderProfile.pubxml",
@@ -275,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "FolderProfile.pubxml.user",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Properties\\PublishProfiles\\FolderProfile.pubxml.user",
               "RelativeDocumentMoniker": "WebAPI\\Properties\\PublishProfiles\\FolderProfile.pubxml.user",
@@ -287,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "GameMatcheModel.cs",
               "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Model\\GameMatcheModel.cs",
               "RelativeDocumentMoniker": "WebAPI\\Model\\GameMatcheModel.cs",
@@ -296,18 +347,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T02:51:54.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Rooms.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\Rooms.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Data\\Rooms.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Data\\Rooms.cs",
-              "RelativeToolTip": "WebAPI\\Data\\Rooms.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T02:07:46.601Z"
             }
           ]
         }
