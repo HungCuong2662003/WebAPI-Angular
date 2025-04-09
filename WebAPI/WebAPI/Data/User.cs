@@ -17,7 +17,8 @@ namespace WebAPI.Data
 		public ICollection<GameMatches>? MatchesAsPlayer2 { get; set; }
 		[InverseProperty("Winner")]
 		public ICollection<GameMatches>? MatchesAsWinner { get; set; }
-		public Ranking? Ranking { get; set; }
+        public ICollection<RoomPlayers>? RoomPlayers { get; set; }
+        public Ranking? Ranking { get; set; }
 	}
 
 }

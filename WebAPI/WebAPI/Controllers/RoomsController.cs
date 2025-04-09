@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Rooms>>> GetRooms()
         {
-            return await _context.Rooms.ToListAsync();
+            return await _context.Rooms.Where(room => room.IsPublic == true).ToListAsync();
         }
 
         // GET: api/Rooms/5
@@ -74,26 +74,13 @@ namespace WebAPI.Controllers
 
         // POST: api/Rooms
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
- 
- 
         [HttpPost]
         public async Task<ActionResult<Rooms>> PostRooms(Rooms rooms)
         {
-            var room = new Rooms
-            {
-                ID = Guid.NewGuid(),
-                RoomCode = rooms.RoomCode,
-                OwnerID = rooms.OwnerID,
-                PasswordRoom = rooms.PasswordRoom,
-                IsPublic = rooms.IsPublic,
-                Status = rooms.Status,
-                CreateAt = DateTime.UtcNow
-            };
-
-            _context.Rooms.Add(room);
+            _context.Rooms.Add(rooms);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetRooms), new { id = room.ID }, room);
+            return CreatedAtAction("GetRooms", new { id = rooms.ID }, rooms);
         }
 
         // DELETE: api/Rooms/5
@@ -116,5 +103,9 @@ namespace WebAPI.Controllers
         {
             return _context.Rooms.Any(e => e.ID == id);
         }
-    }
+
+
+
+
+    } 
 }

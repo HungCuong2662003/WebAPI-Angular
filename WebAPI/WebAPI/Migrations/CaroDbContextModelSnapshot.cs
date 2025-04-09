@@ -252,6 +252,31 @@ namespace WebAPI.Migrations
                     b.ToTable("Ranking");
                 });
 
+            modelBuilder.Entity("WebAPI.Data.RoomPlayers", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("JoinedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("RoomId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoomId");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("RoomPlayers");
+                });
+
             modelBuilder.Entity("WebAPI.Data.Rooms", b =>
                 {
                     b.Property<Guid>("ID")
@@ -277,14 +302,18 @@ namespace WebAPI.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("Soluong")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.HasKey("ID");
 
                     b.HasIndex("OwnerID");
+
+                    b.HasIndex("RoomCode")
+                        .IsUnique();
 
                     b.ToTable("Rooms");
                 });
@@ -482,6 +511,25 @@ namespace WebAPI.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("WebAPI.Data.RoomPlayers", b =>
+                {
+                    b.HasOne("WebAPI.Data.Rooms", "Room")
+                        .WithMany("RoomPlayers")
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("WebAPI.Data.User", "User")
+                        .WithMany("RoomPlayers")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Room");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("WebAPI.Data.Rooms", b =>
                 {
                     b.HasOne("WebAPI.Data.User", "Owner")
@@ -501,6 +549,8 @@ namespace WebAPI.Migrations
             modelBuilder.Entity("WebAPI.Data.Rooms", b =>
                 {
                     b.Navigation("Matches");
+
+                    b.Navigation("RoomPlayers");
                 });
 
             modelBuilder.Entity("WebAPI.Data.User", b =>
@@ -514,6 +564,8 @@ namespace WebAPI.Migrations
                     b.Navigation("OwnedRooms");
 
                     b.Navigation("Ranking");
+
+                    b.Navigation("RoomPlayers");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Caro\WebAPI\WebAPI\WebAPI\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2025-04-08T09:49:00.3834078Z||;True|2025-04-08T14:45:39.8702749+07:00||;True|2025-04-08T14:39:39.6022078+07:00||;True|2025-04-08T14:34:37.4344049+07:00||;True|2025-04-08T14:02:35.9345462+07:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

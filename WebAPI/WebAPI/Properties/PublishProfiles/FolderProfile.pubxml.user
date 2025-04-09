@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Caro\WebAPI\WebAPI\WebAPI\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>False|2025-04-08T06:56:38.5966826Z||;False|2025-04-08T13:56:03.5655400+07:00||;False|2025-04-08T13:52:14.7618331+07:00||;False|2025-04-08T13:48:25.0860417+07:00||;False|2025-04-08T13:45:18.1232410+07:00||;False|2025-04-08T13:44:50.2429197+07:00||;True|2025-04-08T10:59:25.2825501+07:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=CUONGNH-ITHPG\HUNGCUONG%3bDatabase=CaroGameDb%3bTrusted_Connection=True%3bTrustServerCertificate=True%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

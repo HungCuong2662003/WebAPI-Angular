@@ -4,8 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Data;
+using WebAPI.Model;
 
 namespace WebAPI.Controllers
 {
@@ -14,10 +17,12 @@ namespace WebAPI.Controllers
     public class GameMatchesController : ControllerBase
     {
         private readonly CaroDbContext _context;
+        private readonly IHubContext<GameHub> _hubContext;
 
-        public GameMatchesController(CaroDbContext context)
+        public GameMatchesController(CaroDbContext context , IHubContext<GameHub> hubContext)
         {
             _context = context;
+            _hubContext = hubContext;
         }
 
         // GET: api/GameMatches
@@ -39,6 +44,22 @@ namespace WebAPI.Controllers
             }
 
             return gameMatches;
+        }
+        // API để lưu lượt đi của người chơi
+        [HttpPost("{matchId}/move")]
+        public async Task<IActionResult> MakeMove(Guid matchId, Moves move)
+        {
+            var match = await _context.GameMatches.FindAsync(matchId);
+            if (match == null) return NotFound();
+
+            move.ID = Guid.NewGuid();
+            move.MatchID = matchId;
+            move.CreateAt = DateTime.Now;
+
+            _context.Moves.Add(move);
+            await _context.SaveChangesAsync();
+
+            return Ok(move);
         }
 
         // PUT: api/GameMatches/5
@@ -82,6 +103,52 @@ namespace WebAPI.Controllers
 
             return CreatedAtAction("GetGameMatches", new { id = gameMatches.ID }, gameMatches);
         }
+        public class StartMatchRequest
+        {
+            public Guid RoomId { get; set; }
+        }
+
+        [HttpPost("StartMatch")]
+        public async Task<IActionResult> StartMatch(GameMatcheModel gameMatcheModel)
+        {
+            var roomId = gameMatcheModel.RoomId;
+
+            var players = await _context.RoomPlayers
+                .Where(rp => rp.RoomId == roomId)
+                .Select(rp => rp.UserID)
+                .ToListAsync();
+
+            if (players.Count < 2)
+                return BadRequest("Phòng chưa đủ 2 người để bắt đầu trận đấu.");
+
+            //var existingMatch = await _context.GameMatches.FirstOrDefaultAsync(m => m.RoomId == roomId);
+            //if (existingMatch != null)
+            //    return BadRequest("Trận đấu đã được khởi tạo.");
+
+            var match = new GameMatches
+            {
+                ID = Guid.NewGuid(),
+                RoomId = roomId,
+                Player1ID = players[0],
+                Player2ID = players[1],
+                CreateAt = DateTime.Now
+            };
+
+            // Gửi matchId về tất cả client trong room
+            await _hubContext.Clients.Group(gameMatcheModel.RoomId.ToString())
+                .SendAsync("MatchStarted", match.ID);
+            _context.GameMatches.Add(match);
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                message = "Trận đấu đã bắt đầu.",
+                matchId = match.ID,
+                player1 = match.Player1ID,
+                player2 = match.Player2ID
+            });
+        }
+
 
         // DELETE: api/GameMatches/5
         [HttpDelete("{id}")]

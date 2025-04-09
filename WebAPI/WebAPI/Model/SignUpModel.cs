@@ -5,7 +5,7 @@ namespace WebAPI.Model
     public class SignUpModel
     {
         [Required]
-        public string Firtname { get; set; } = string.Empty;
+        public string Firstname { get; set; } = string.Empty;
         [Required]
         public string Lastname { get; set; } = string.Empty;
         [Required,EmailAddress]

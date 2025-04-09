@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,10 +10,10 @@ namespace WebAPI.Data
 	public class Rooms
 	{
 		[Key]
-		public Guid ID { get; set; }
+		public Guid ID { get; set; } = Guid.NewGuid();
 
 		[Required, MaxLength(10)]
-		public string RoomCode { get; set; } = string.Empty;
+        public string RoomCode { get; set; }
 
 		[Required]
 		public string OwnerID { get; set; }
@@ -22,16 +23,17 @@ namespace WebAPI.Data
 
 		[MaxLength(50)]
 		public string? PasswordRoom { get; set; }
+    
+        public int Soluong { get; set; } = 0;  // Gán giá trị mặc định là 0
 
-		[Required]
-		public bool IsPublic { get; set; } = true;
+		public bool IsPublic { get; set; } 
 
-		[Required, MaxLength(50)]
-		public string Status { get; set; } = "Waiting";
+		public bool Status { get; set; } 
 
 		public DateTime CreateAt { get; set; } = DateTime.Now;
 
 		// Navigation property
 		public ICollection<GameMatches>? Matches { get; set; }
-	}
+        public ICollection<RoomPlayers>? RoomPlayers { get; set; }
+    }
 }
