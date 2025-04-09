@@ -160,13 +160,26 @@ namespace WebAPI.Controllers
 
         // POST: api/Rooms
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+ 
+ 
         [HttpPost]
         public async Task<ActionResult<Rooms>> PostRooms(Rooms rooms)
         {
-            _context.Rooms.Add(rooms);
+            var room = new Rooms
+            {
+                ID = Guid.NewGuid(),
+                RoomCode = rooms.RoomCode,
+                OwnerID = rooms.OwnerID,
+                PasswordRoom = rooms.PasswordRoom,
+                IsPublic = rooms.IsPublic,
+                Status = rooms.Status,
+                CreateAt = DateTime.UtcNow
+            };
+
+            _context.Rooms.Add(room);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetRooms", new { id = rooms.ID }, rooms);
+            return CreatedAtAction(nameof(GetRooms), new { id = room.ID }, room);
         }
 
         // DELETE: api/Rooms/5
