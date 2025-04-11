@@ -28,4 +28,8 @@
   <p class="message" [ngClass]="{ success: message === 'Đăng nhập thành công!', error: message !== 'Đăng nhập thành công!' }">
     {{ message }}
   </p>
+  <div class="register-inline">
+    <span>Chưa có tài khoản?</span>
+    <button (click)="goToRegister()">Đăng ký</button>
+  </div>
 </div>

@@ -1,0 +1,108 @@
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333;
+  }
+  
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-container label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .login-container input {
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .login-container input:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  .login-container button {
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-container button:disabled {
+    background-color: #b3cce6;
+    cursor: not-allowed;
+  }
+  
+  .login-container button:hover:not(:disabled) {
+    background-color: #357ab8;
+  }
+  
+  .message {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .message.success {
+    color: #28a745;
+  }
+  
+  .message.error {
+    color: #dc3545;
+  }
+  .register-inline {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .register-inline span {
+    color: #555;
+  }
+  
+  .register-inline button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-inline button:hover {
+    background-color: #218838;
+  }
+  
+  

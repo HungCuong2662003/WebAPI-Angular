@@ -27,6 +27,9 @@ export class LoginComponent {
       },
     });
   }
+  goToRegister() {
+    this.router.navigate(['/register']); // Điều hướng tới trang tạo phòng
+  }
 }
 
 

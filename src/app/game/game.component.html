@@ -1,8 +1,14 @@
 <div class="game-container">
+  <h3>Người chơi trong phòng:</h3>
+  <!-- <ul>
+    <li *ngFor="let player of playersInRoom">
+       {{ player.fullName }}
+    </li>
+  </ul> -->
   <!-- Nút điều khiển game -->
   <div class="game-controls">
     <button (click)="startGame()">Bắt đầu trò chơi</button>
-    <button (click)="leaveRoom()">Rời phòng</button>
+    <button (click)="leaveRoom(true)">Rời phòng</button>
     <button (click)="resetGame()">Chơi lại</button>
  
   </div>

@@ -79,24 +79,12 @@ export class RoomComponent implements OnInit {
       userId: this.profile.id,
     };
     console.log(requestBody);  // Kiểm tra các giá trị trong form
-    // // Gửi yêu cầu tham gia phòng
-    // this.SharedService.joinRoom(requestBody).subscribe({
-    //   next: (response) => {
-    //     console.log('Tham gia phòng thành công:', response);
-    //     localStorage.setItem(`room_${this.profile.id}`, room.id);
-    //     this.router.navigate(['/game']);  // Điều hướng đến trang game
-    //   },
-    //   error: (error) => {
-    //     console.error('Lỗi khi tham gia phòng:', error);
-    //     alert('Có lỗi xảy ra khi tham gia phòng');
-    //   }
-    // });
     this.SharedService.joinRoom(requestBody).subscribe({
       next: async (response) => {
         console.log('Tham gia phòng thành công:', response);
         localStorage.setItem(`room_${this.profile.id}`, room.id);
   
-          // ✅ Gọi hàm join SignalR từ SharedService
+          // GGọi hàm join SignalR từ SharedService
         await this.SharedService.joinSignalRRoom(room.id);
         // Điều hướng tới trang game
         this.router.navigate(['/game']);

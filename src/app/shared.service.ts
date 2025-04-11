@@ -15,7 +15,7 @@ export interface Room {
   providedIn: 'root'
 })
 export class SharedService {
-  readonly APIUrl = "https://localhost:7224/api";
+  readonly APIUrl = "http://10.35.211.179/api";
   private hubConnection: HubConnection | undefined;
 
   private moveMadeSource = new Subject<{ playerId: string, x: number, y: number }>();
@@ -27,7 +27,8 @@ export class SharedService {
   private currentUserId: string | null = null;
   private opponentId: string | null = null;
   private nextTurnPlayerId: string = '';
-
+  private userJoinedSource = new Subject<any>();
+  userJoined$ = this.userJoinedSource.asObservable();
   constructor(private http: HttpClient) {}
 
   // Đăng ký, đăng nhập
@@ -98,44 +99,62 @@ export class SharedService {
   startMatch(RoomPlayers: any): Observable<any> {
     return this.http.post<any>(`${this.APIUrl}/GameMatches/StartMatch`, RoomPlayers);
   }
-
+  getPlayersInRoom(roomId: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.APIUrl}/RoomPlayers/GetPlayersInRoom/${roomId}`);
+  }
+  private isConnected: boolean = false;
   // Khởi tạo kết nối SignalR
   public startConnection(): void {
     this.hubConnection = new HubConnectionBuilder()
-      .withUrl('https://localhost:7224/gameHub', {
+      .withUrl('http://10.35.211.179/gameHub', {
         withCredentials: true
       })
       .build();
-
-    this.hubConnection
+      this.hubConnection
       .start()
       .then(() => {
         console.log("✅ SignalR connected successfully");
-
-        // MoveMade từ server
+        this.isConnected = true;
+  
+        // Xóa các sự kiện cũ trước khi đăng ký lại
+        this.hubConnection!.off("MoveMade");
+        this.hubConnection!.off("GameOver");
+        this.hubConnection!.off("ResetGame");
+        this.hubConnection!.off("PlayerLeftAndGameOver");
+        this.hubConnection!.off("UserJoined");
+  
         this.hubConnection!.on("MoveMade", (playerId: string, x: number, y: number, nextTurnPlayerId: string) => {
-          console.log("📥 Nhận MoveMade:", playerId, x, y, nextTurnPlayerId);
+          console.log("Nhận MoveMade:", playerId, x, y, nextTurnPlayerId);
           this.nextTurnPlayerId = nextTurnPlayerId;
           this.moveMadeSource.next({ playerId, x, y });
         });
-
+  
         this.hubConnection!.on("GameOver", (winner: { userId: string, fullName: string }) => {
-          console.log("🏁 Game kết thúc:", winner.fullName); // Xem log này có in ra không
-          this.gameOverSource.next(winner.fullName); // phải gửi fullName vào Observable
+          console.log("🏁 Game kết thúc:", winner.fullName);
+          this.gameOverSource.next(winner.fullName);
         });
-        
+  
         this.hubConnection!.on("ResetGame", () => {
-          console.log("🔁 Nhận ResetGame từ server");
+          console.log("Nhận ResetGame từ server");
           this.resetGameSource.next();
         });
-
+  
+        this.hubConnection!.on("PlayerLeftAndGameOver", (data: any) => {
+          console.log("Người kia đã rời trận, bạn thắng!", data);
+          this.gameOverSource.next(data.fullName);
+        });
+  
+        this.hubConnection!.on("UserJoined", (data: any) => {
+          console.log("👤 Có người mới vào phòng:", data);
+          this.userJoinedSource.next(data);
+        });
       })
       .catch(err => console.error('Lỗi khi kết nối SignalR:', err));
   }
   public listenMatchStarted(callback: (matchId: string) => void): void {
     if (this.hubConnection) {
       this.hubConnection.on("MatchStarted", (matchInfo: any) => {
-        console.log("📥 Nhận MatchStarted:", matchInfo);
+        console.log("Nhận MatchStarted:", matchInfo);
         
         const { matchId, player1, player2, nextTurn } = matchInfo;
   
@@ -155,7 +174,7 @@ export class SharedService {
   public resetGame(matchId: string): void {
     if (this.hubConnection) {
       this.hubConnection.invoke("ResetGame", matchId)
-        .catch(err => console.error("❌ Lỗi khi gửi ResetGame:", err));
+        .catch(err => console.error("Lỗi khi gửi ResetGame:", err));
     }
   }
   private resetGameSource = new Subject<void>();
@@ -165,24 +184,61 @@ onResetGame(): Observable<void> {
 }
   
   // Tham gia nhóm SignalR
+  // public async joinSignalRRoom(roomId: string): Promise<void> {
+  //   if (this.hubConnection) {
+  //     try {
+  //       await this.hubConnection.invoke("JoinRoom", roomId);
+  //       console.log(`✅ Đã vào SignalR room: ${roomId}`);
+  //     } catch (error) {
+  //       console.error("Lỗi khi vào SignalR group:", error);
+  //     }
+  //   } else {
+  //     console.warn("Hub chưa được khởi tạo");
+  //   }
+  // }
+  
   public async joinSignalRRoom(roomId: string): Promise<void> {
-    if (this.hubConnection) {
-      try {
-        await this.hubConnection.invoke("JoinRoom", roomId);
-        console.log(`✅ Đã vào SignalR room: ${roomId}`);
-      } catch (error) {
-        console.error("❌ Lỗi khi vào SignalR group:", error);
-      }
+    if (!this.hubConnection || this.hubConnection.state !== 'Connected') {
+      console.warn(" Hub chưa kết nối, đang chờ kết nối lại...");
+      return new Promise(resolve => {
+        const checkInterval = setInterval(() => {
+          if (this.hubConnection && this.hubConnection.state === 'Connected') {
+            clearInterval(checkInterval);
+            this.hubConnection!.invoke("JoinRoom", roomId)
+              .then(() => {
+                console.log(`✅ Đã vào SignalR room: ${roomId}`);
+                resolve();
+              })
+              .catch(err => console.error("Lỗi vào phòng:", err));
+          }
+        }, 200);
+      });
     } else {
-      console.warn("⚠️ Hub chưa được khởi tạo");
+      await this.hubConnection.invoke("JoinRoom", roomId);
+      console.log(`✅ Đã vào SignalR room: ${roomId}`);
     }
   }
+  // Rời nhóm SignalR
+  public async OutSignalRRoom(roomId: string, userId: string): Promise<void> {
+    if (this.hubConnection) {
+      try {
+        await this.hubConnection.invoke('LeaveRoom', roomId, userId);
+
+        console.log(`✅ Đã rời SignalR room: ${roomId}`);
+      } catch (error) {
+        console.error("Lỗi khi rời SignalR group:", error);
+      }
+    } else {
+      console.warn("Hub chưa được khởi tạo");
+    }
+  }
+  
 
   // Gửi nước đi lên server
   public makeMove(matchId: string, playerId: string, x: number, y: number): void {
     if (this.hubConnection) {
       this.hubConnection.invoke('MakeMove', matchId, playerId, x, y)
-        .catch(err => console.error('❌ Lỗi khi gửi nước đi:', err));
+        .catch(err => console.error('Lỗi khi gửi nước đi:', err));
     }
   }
 
