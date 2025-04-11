@@ -55,7 +55,20 @@ namespace WebAPI.Controllers
                 data = roomPlayer
             });
         }
+        [HttpGet("GetPlayersInRoom/{roomId}")]
+        public async Task<IActionResult> GetPlayersInRoom(Guid roomId)
+        {
+            var players = await _context.RoomPlayers
+                .Where(rp => rp.RoomId == roomId)
+                .Include(rp => rp.User) // cần include để lấy thông tin người dùng
+                .Select(rp => new {
+                    userId = rp.UserID,
+                    fullName = rp.User.Firstname + " " + rp.User.Lastname
+                })
+                .ToListAsync();
 
+            return Ok(players);
+        }
 
         // PUT: api/RoomPlayers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -195,8 +208,6 @@ namespace WebAPI.Controllers
             {
                 return NotFound("Room and pass ");
             }
-
-
             bool isPlayerExists = await _context.RoomPlayers
                 .AnyAsync(rp => rp.RoomId == RoomPlayerModel.RoomId && rp.UserID == RoomPlayerModel.UserID);
 
@@ -204,45 +215,30 @@ namespace WebAPI.Controllers
             {
                 return BadRequest("Player already exists in this room.");
             }
-
-          
             if (!room.Status || room.Soluong >= 2)
             {
                 return BadRequest("Room is already full or in use.");
             }
-
-           
             var roomPlayers = new RoomPlayers
             {
                 RoomId = RoomPlayerModel.RoomId,
                 UserID = RoomPlayerModel.UserID
             };
-         
             _context.RoomPlayers.Add(roomPlayers);
             await _context.SaveChangesAsync();
-
-           
             room.Soluong++;
-
-      
             if (room.Soluong >= 2)
             {
                 room.Status = false;
             }
-
-       
             _context.Rooms.Update(room);
             await _context.SaveChangesAsync();
-
-     
             return CreatedAtAction(nameof(GetRoomPlayers), new { id = roomPlayers.Id }, new
             {
                 Status = 201,
                 Message = "Player joined the room successfully.",
                 Data = roomPlayers
-            });
-           
-                   
+            });      
         }
      
         [HttpPost("out")]
@@ -292,7 +288,8 @@ namespace WebAPI.Controllers
             return Ok(new
             {
                 status = 200,
-                message = "Player removed from room successfully"
+                message = "Player removed from room successfully",
+                data = roomPlayer
             });
         }
 

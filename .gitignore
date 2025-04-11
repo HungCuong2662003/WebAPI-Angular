@@ -3,3 +3,7 @@
 ################################################################################
 
 /WebAPI/.vs/WebAPI/FileContentIndex
+.vs/
+# bin, obj folders
+/WebAPI/bin/
+/WebAPI/obj/

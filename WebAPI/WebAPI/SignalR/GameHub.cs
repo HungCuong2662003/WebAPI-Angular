@@ -139,11 +139,11 @@ public class GameHub : Hub
         }
         return count >= 5;
     }
-    public async Task ResetGame(Guid matchId)
+    public async Task ResetGame(string matchId)
     {
         var match = await _context.GameMatches
             .Include(m => m.Moves) // nếu có liên kết moves
-            .FirstOrDefaultAsync(m => m.ID == matchId);
+            .FirstOrDefaultAsync(m => m.ID == Guid.Parse(matchId));
 
         if (match != null)
         {
@@ -157,10 +157,61 @@ public class GameHub : Hub
         await Clients.Group(match.RoomId.ToString()).SendAsync("ResetGame");
     }
 
+    //public async Task JoinRoom(string roomId)
+    //{
+    //    await Groups.AddToGroupAsync(Context.ConnectionId, roomId);
+    //    Console.WriteLine($"{Context.ConnectionId} joined room {roomId}");
+    //}
     public async Task JoinRoom(string roomId)
     {
         await Groups.AddToGroupAsync(Context.ConnectionId, roomId);
         Console.WriteLine($"{Context.ConnectionId} joined room {roomId}");
+
+        // Broadcast thông báo khi có client join room
+        await Clients.Group(roomId).SendAsync("UserJoined", new
+        {
+            ConnectionId = Context.ConnectionId
+            // Bạn có thể thêm thông tin người dùng khác nếu cần
+        });
+    }
+    public async Task LeaveRoom(string roomId, string playerId)
+    {
+        await Groups.RemoveFromGroupAsync(Context.ConnectionId, roomId);
+
+        var match = await _context.GameMatches
+            .Where(m => m.RoomId.ToString() == roomId && m.WinnerID == null)
+            .FirstOrDefaultAsync();
+
+        if (match != null && (match.Player1ID == playerId || match.Player2ID == playerId))
+        {
+            string winnerId = (playerId == match.Player1ID) ? match.Player2ID : match.Player1ID;
+            match.WinnerID = winnerId;
+
+            var winner = await _context.Users.FirstOrDefaultAsync(u => u.Id == winnerId);
+            var loser = await _context.Users.FirstOrDefaultAsync(u => u.Id == playerId);
+
+            if (winner != null) winner.EloRating += 10;
+            if (loser != null) loser.EloRating = Math.Max(100, loser.EloRating - 10);
+
+            await _context.SaveChangesAsync();
+
+            await Clients.Group(roomId).SendAsync("PlayerLeftAndGameOver", new
+            {
+                userId = winnerId,
+                fullName = $"{winner.Firstname} {winner.Lastname}"
+            });
+
+            Console.WriteLine($"🔥 Game kết thúc do người rời phòng: {winner.Firstname}");
+        }
+        else
+        {
+            await Clients.Group(roomId).SendAsync("PlayerLeft", playerId);
+            Console.WriteLine($"🟡 Người rời phòng nhưng không có match đang diễn ra.");
+        }
+        // 🔁 Reset bàn cờ trên tất cả client
+        await Clients.Group(roomId).SendAsync("ResetGame");
+
+        Console.WriteLine($"Player {playerId} left room {roomId}");
     }
 
     public override Task OnConnectedAsync()
