@@ -1,26 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Caro\\WebAPI\\WebAPI\\",
+  "WorkspaceRootPath": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\roomplayerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\roomplayerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\gamematchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\gamematchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\signalr\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\signalr\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\signalr\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\gamematchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\gamematchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\caro\\webapi\\webapi\\webapi\\controllers\\movescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\carodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\carodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\rankingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\rankingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\gamematches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\gamematches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\roomplayerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\roomplayerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\model\\signupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\signupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\model\\roomplayermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\model\\roomplayermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\movescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\movescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\ranking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\ranking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\data\\roomplayers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\data\\roomplayers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|d:\\data\\net_core\\projects\\webapi-angular\\webapi\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E30DDBF-20AE-4521-954D-AA9BD7A0D061}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,80 +78,224 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowDEAAAATAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GameHub.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\SignalR\\GameHub.cs",
+              "RelativeDocumentMoniker": "WebAPI\\SignalR\\GameHub.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\SignalR\\GameHub.cs",
+              "RelativeToolTip": "WebAPI\\SignalR\\GameHub.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAADwv6UAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T01:12:41.637Z",
+              "WhenOpened": "2025-04-09T18:09:42.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MovesController.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\MovesController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\MovesController.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\MovesController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\MovesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CaroDbContext.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\CaroDbContext.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\CaroDbContext.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\CaroDbContext.cs",
+              "RelativeToolTip": "WebAPI\\Data\\CaroDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T10:04:31.436Z",
+              "WhenOpened": "2025-04-10T04:04:49.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RankingsController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\RankingsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\RankingsController.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\RankingsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\RankingsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T03:28:45.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "GameMatchesController.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\GameMatchesController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\GameMatchesController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\GameMatchesController.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\GameMatchesController.cs*",
-              "RelativeToolTip": "WebAPI\\Controllers\\GameMatchesController.cs*",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAIwLEAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\GameMatchesController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\GameMatchesController.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAiwHkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T08:26:39.672Z",
+              "WhenOpened": "2025-04-09T12:34:18.656Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameHub.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\SignalR\\GameHub.cs",
-              "RelativeDocumentMoniker": "WebAPI\\SignalR\\GameHub.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\SignalR\\GameHub.cs",
-              "RelativeToolTip": "WebAPI\\SignalR\\GameHub.cs",
-              "ViewState": "AgIAALkAAAAAAAAAAAAAAKQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T08:16:16.525Z",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebAPI\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-10T17:20:12.757Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "RoomPlayersController.cs",
-              "DocumentMoniker": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\RoomPlayersController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\RoomPlayersController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\RoomPlayersController.cs",
-              "ToolTip": "D:\\Caro\\WebAPI\\WebAPI\\WebAPI\\Controllers\\RoomPlayersController.cs*",
-              "RelativeToolTip": "WebAPI\\Controllers\\RoomPlayersController.cs*",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAwDcAAAAPAAAAAAAAAA==",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\RoomPlayersController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\RoomPlayersController.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAiwK8AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T08:15:56.39Z",
+              "WhenOpened": "2025-04-09T12:34:22.646Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAnwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T17:16:15.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameMatches.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\GameMatches.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\GameMatches.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\GameMatches.cs",
+              "RelativeToolTip": "WebAPI\\Data\\GameMatches.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA3wCYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T12:43:40.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SignUpModel.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Model\\SignUpModel.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Model\\SignUpModel.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Model\\SignUpModel.cs",
+              "RelativeToolTip": "WebAPI\\Model\\SignUpModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:10:00.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoomPlayerModel.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Model\\RoomPlayerModel.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Model\\RoomPlayerModel.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Model\\RoomPlayerModel.cs",
+              "RelativeToolTip": "WebAPI\\Model\\RoomPlayerModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T20:04:02.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\appsettings.json",
+              "RelativeToolTip": "WebAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-09T12:48:16.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MovesController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\MovesController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\MovesController.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\MovesController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\MovesController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T03:44:18.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RoomsController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\RoomsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\RoomsController.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\RoomsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\RoomsController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T03:27:41.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Rooms.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\Rooms.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\Rooms.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\Rooms.cs",
+              "RelativeToolTip": "WebAPI\\Data\\Rooms.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T09:01:04.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Ranking.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\Ranking.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\Ranking.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\Ranking.cs",
+              "RelativeToolTip": "WebAPI\\Data\\Ranking.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T09:01:12.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RoomPlayers.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\RoomPlayers.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Data\\RoomPlayers.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Data\\RoomPlayers.cs",
+              "RelativeToolTip": "WebAPI\\Data\\RoomPlayers.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T09:01:04.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Data\\NET_Core\\Projects\\WebAPI-Angular\\WebAPI\\WebAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:06:27.459Z"
             }
           ]
         }

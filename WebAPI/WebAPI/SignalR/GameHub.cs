@@ -157,6 +157,44 @@ public class GameHub : Hub
         await Clients.Group(match.RoomId.ToString()).SendAsync("ResetGame");
     }
 
+
+    public async Task StartMatch(string roomId)
+    {
+        var players = await _context.RoomPlayers
+                       .Where(rp => rp.RoomId == Guid.Parse(roomId))
+                       .Select(rp => rp.UserID)
+                       .ToListAsync();
+
+        if (players.Count < 2)
+        {
+            await Clients.Group(roomId).SendAsync("NotEnoughPlayers", "Cần ít nhất 2 người chơi để bắt đầu trận đấu.");
+        }
+
+        var match = new GameMatches
+        {
+            ID = Guid.NewGuid(),
+            RoomId = Guid.Parse(roomId),
+            Player1ID = players[0],
+            Player2ID = players[1],
+            NextTurnPlayerID = players[0], // 👈 Bắt đầu từ Player1
+            CreateAt = DateTime.Now
+        };
+
+        _context.GameMatches.Add(match);
+        await _context.SaveChangesAsync();
+
+        await Clients.Group(roomId).SendAsync("MatchStarted", new
+        {
+            matchId = match.ID,
+            player1 = match.Player1ID,
+            player2 = match.Player2ID,
+            nextTurn = match.NextTurnPlayerID
+        });
+
+        Console.WriteLine($"🔥 Trận đấu đã bắt đầu giữa {match.Player1ID} và {match.Player2ID}");
+
+
+    }
     //public async Task JoinRoom(string roomId)
     //{
     //    await Groups.AddToGroupAsync(Context.ConnectionId, roomId);
