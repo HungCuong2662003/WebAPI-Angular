@@ -56,8 +56,12 @@ builder.Services.AddAuthentication(options =>
     };
 });
 builder.Services.AddAuthorization();
-// C?u hình SignalR
-builder.Services.AddSignalR();
+//// C?u hình SignalR
+//builder.Services.AddSignalR();
+builder.Services.AddSignalR().AddStackExchangeRedis("localhost:6379", options =>
+{
+    options.Configuration.ChannelPrefix = "caro";
+});
 //tranh vong lap vo tan
 builder.Services.AddControllers().AddJsonOptions(x =>
 {

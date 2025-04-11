@@ -170,10 +170,29 @@ public class GameHub : Hub
         // Broadcast thông báo khi có client join room
         await Clients.Group(roomId).SendAsync("UserJoined", new
         {
-            ConnectionId = Context.ConnectionId
-            // Bạn có thể thêm thông tin người dùng khác nếu cần
+            ConnectionId = Context.ConnectionId,
+
         });
+
     }
+    //public async Task JoinRoom(string roomId, string userId)
+    //{
+    //    await Groups.AddToGroupAsync(Context.ConnectionId, roomId);
+    //    Console.WriteLine($"{Context.ConnectionId} joined room {roomId}");
+
+    //    var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+    //    if (user == null) return;
+
+    //    string fullName = $"{user.Firstname} {user.Lastname}";
+
+    //    await Clients.Group(roomId).SendAsync("UserJoined", new
+    //    {
+    //        ConnectionId = Context.ConnectionId,
+    //        UserId = userId,
+    //        FullName = fullName
+    //    });
+    //}
+
     public async Task LeaveRoom(string roomId, string playerId)
     {
         await Groups.RemoveFromGroupAsync(Context.ConnectionId, roomId);
