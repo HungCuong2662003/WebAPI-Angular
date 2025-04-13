@@ -106,14 +106,14 @@ export class SharedService {
   // Khởi tạo kết nối SignalR
   public startConnection(): void {
     this.hubConnection = new HubConnectionBuilder()
-      .withUrl('http://10.35.211.179/gameHub', {
+      .withUrl("http://10.35.211.179/gameHub", {
         withCredentials: true
       })
       .build();
       this.hubConnection
       .start()
       .then(() => {
-        console.log("✅ SignalR connected successfully");
+        console.log("SignalR connected successfully");
         this.isConnected = true;
   
         // Xóa các sự kiện cũ trước khi đăng ký lại
@@ -184,40 +184,19 @@ onResetGame(): Observable<void> {
 }
   
   // Tham gia nhóm SignalR
-  // public async joinSignalRRoom(roomId: string): Promise<void> {
-  //   if (this.hubConnection) {
-  //     try {
-  //       await this.hubConnection.invoke("JoinRoom", roomId);
-  //       console.log(`✅ Đã vào SignalR room: ${roomId}`);
-  //     } catch (error) {
-  //       console.error("Lỗi khi vào SignalR group:", error);
-  //     }
-  //   } else {
-  //     console.warn("Hub chưa được khởi tạo");
-  //   }
-  // }
-  
   public async joinSignalRRoom(roomId: string): Promise<void> {
-    if (!this.hubConnection || this.hubConnection.state !== 'Connected') {
-      console.warn(" Hub chưa kết nối, đang chờ kết nối lại...");
-      return new Promise(resolve => {
-        const checkInterval = setInterval(() => {
-          if (this.hubConnection && this.hubConnection.state === 'Connected') {
-            clearInterval(checkInterval);
-            this.hubConnection!.invoke("JoinRoom", roomId)
-              .then(() => {
-                console.log(`✅ Đã vào SignalR room: ${roomId}`);
-                resolve();
-              })
-              .catch(err => console.error("Lỗi vào phòng:", err));
-          }
-        }, 200);
-      });
+    if (this.hubConnection) {
+      try {
+        await this.hubConnection.invoke("JoinRoom", roomId);
+        console.log(`✅ Đã vào SignalR room: ${roomId}`);
+      } catch (error) {
+        console.error("Lỗi khi vào SignalR group:", error);
+      }
     } else {
-      await this.hubConnection.invoke("JoinRoom", roomId);
-      console.log(`✅ Đã vào SignalR room: ${roomId}`);
+      console.warn("Hub chưa được khởi tạo");
     }
   }
+  
   // Rời nhóm SignalR
   public async OutSignalRRoom(roomId: string, userId: string): Promise<void> {
     if (this.hubConnection) {
