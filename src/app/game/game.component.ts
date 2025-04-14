@@ -99,7 +99,7 @@ export class GameComponent implements OnInit, OnDestroy {
     // ⚠️ KIỂM TRA LƯỢT CHƠI
     const currentTurnPlayerId = this.SharedService.getNextTurnPlayerId();
     if (currentTurnPlayerId !== userId) {
-      alert("⛔ Chưa đến lượt của bạn!");
+      alert("Chưa đến lượt của bạn!");
       return;
     }
   
@@ -164,6 +164,34 @@ export class GameComponent implements OnInit, OnDestroy {
       }
     });
   }
+  // startGame() {
+  //   const userId = this.profile?.id;
+  //   const roomId = localStorage.getItem(`room_${userId}`);
+  
+  //   if (!roomId) {
+  //     alert('Không tìm thấy phòng hiện tại');
+  //     return;
+  //   }
+  
+  
+  //   this.SharedService.joinSignalRRoom(roomId).then(() => {
+  //     const requestBody = { roomId: roomId };
+  //     this.SharedService.startMatch(requestBody).subscribe({
+  //       next: (res) => {
+  //         const matchId = res.matchId;
+  //         localStorage.setItem("matchId", matchId);
+  //         console.log("Trận đấu đã bắt đầu:", res);
+  //         alert("Trận đấu đã bắt đầu!");
+  //       },
+  //       error: (err) => {
+  //         console.error("Lỗi khi bắt đầu trận đấu:", err);
+  //         alert(err.error || "Không thể bắt đầu trận đấu.");
+  //       }
+  //     });
+  //   }).catch((err) => {
+  //     console.error("Không thể vào SignalR room trước khi bắt đầu trận:", err);
+  //   });
+  // }
   startGame() {
     const userId = this.profile?.id;
     const roomId = localStorage.getItem(`room_${userId}`);
@@ -173,25 +201,21 @@ export class GameComponent implements OnInit, OnDestroy {
       return;
     }
   
-  
-    this.SharedService.joinSignalRRoom(roomId).then(() => {
-      const requestBody = { roomId: roomId };
-      this.SharedService.startMatch(requestBody).subscribe({
-        next: (res) => {
-          const matchId = res.matchId;
-          localStorage.setItem("matchId", matchId);
-          console.log("Trận đấu đã bắt đầu:", res);
-          alert("Trận đấu đã bắt đầu!");
-        },
-        error: (err) => {
-          console.error("Lỗi khi bắt đầu trận đấu:", err);
-          alert(err.error || "Không thể bắt đầu trận đấu.");
-        }
-      });
-    }).catch((err) => {
-      console.error("Không thể vào SignalR room trước khi bắt đầu trận:", err);
+    const requestBody = { roomId: roomId };
+    this.SharedService.startMatch(requestBody).subscribe({
+      next: (res) => {
+        const matchId = res.matchId;
+        localStorage.setItem("matchId", matchId);
+        console.log("Trận đấu đã bắt đầu:", res);
+        alert("Trận đấu đã bắt đầu!");
+      },
+      error: (err) => {
+        console.error("Lỗi khi bắt đầu trận đấu:", err);
+        alert(err.error || "Không thể bắt đầu trận đấu.");
+      }
     });
   }
+  
   
   isLeavingRoom = false;
 

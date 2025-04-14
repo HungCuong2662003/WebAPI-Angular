@@ -61,32 +61,71 @@ export class RoomComponent implements OnInit {
     }
   }
 
+  // joinRoom(room: any) {
+  //   if (!room.status) {
+  //     alert('Phòng này đang chơi, không thể vào');
+  //     return;
+  //   }
+  
+  //   // Kiểm tra nếu playerId và password không phải là null
+  //   if (!this.profile || !this.profile.id ) {
+  //     alert('Cần có đầy đủ thông tin người chơi và mật khẩu');
+  //     return;
+  //   }
+  
+   
+  //   const requestBody = {
+  //     roomId: room.id,
+  //     userId: this.profile.id,
+  //   };
+  //   console.log(requestBody);  // Kiểm tra các giá trị trong form
+  //   this.SharedService.joinRoom(requestBody).subscribe({
+  //     next: async (response) => {
+  //       console.log('Tham gia phòng thành công:', response);
+  //       localStorage.setItem(`room_${this.profile.id}`, room.id);
+  
+  //         // GGọi hàm join SignalR từ SharedService
+  //       await this.SharedService.joinSignalRRoom(room.id);
+  //       // Điều hướng tới trang game
+  //       this.router.navigate(['/game']);
+  //     },
+  //     error: (error) => {
+  //       console.error('Lỗi khi tham gia phòng:', error);
+  //       alert('Có lỗi xảy ra khi tham gia phòng');
+  //     }
+  //   });
+  // }
   joinRoom(room: any) {
     if (!room.status) {
       alert('Phòng này đang chơi, không thể vào');
       return;
     }
   
-    // Kiểm tra nếu playerId và password không phải là null
-    if (!this.profile || !this.profile.id ) {
+    if (!this.profile || !this.profile.id) {
       alert('Cần có đầy đủ thông tin người chơi và mật khẩu');
       return;
     }
   
-   
     const requestBody = {
       roomId: room.id,
       userId: this.profile.id,
     };
-    console.log(requestBody);  // Kiểm tra các giá trị trong form
+  
+    console.log(requestBody);
+  
     this.SharedService.joinRoom(requestBody).subscribe({
       next: async (response) => {
         console.log('Tham gia phòng thành công:', response);
         localStorage.setItem(`room_${this.profile.id}`, room.id);
   
-          // GGọi hàm join SignalR từ SharedService
-        await this.SharedService.joinSignalRRoom(room.id);
-        // Điều hướng tới trang game
+        try {
+          // Vào SignalR room sau khi join phòng thành công
+          await this.SharedService.joinSignalRRoom(room.id);
+          console.log('Đã tham gia SignalR room');
+        } catch (error) {
+          console.error('Lỗi khi vào SignalR room:', error);
+        }
+  
         this.router.navigate(['/game']);
       },
       error: (error) => {
