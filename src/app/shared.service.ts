@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
-
+import * as signalR from '@microsoft/signalr';
 export interface Room {
   roomCode: string;
   ownerID: string;
@@ -15,7 +15,7 @@ export interface Room {
   providedIn: 'root'
 })
 export class SharedService {
-  readonly APIUrl = "http://10.35.211.179/api";
+  readonly APIUrl = "https://localhost:7224/api";
   private hubConnection: HubConnection | undefined;
 
   private moveMadeSource = new Subject<{ playerId: string, x: number, y: number }>();
@@ -106,8 +106,9 @@ export class SharedService {
   // Khởi tạo kết nối SignalR
   public startConnection(): void {
     this.hubConnection = new HubConnectionBuilder()
-      .withUrl("http://10.35.211.179/gameHub", {
-        withCredentials: true
+      .withUrl("https://localhost:7224/gameHub", {
+        withCredentials: true,
+        transport: signalR.HttpTransportType.LongPolling 
       })
       .build();
       this.hubConnection
@@ -130,7 +131,7 @@ export class SharedService {
         });
   
         this.hubConnection!.on("GameOver", (winner: { userId: string, fullName: string }) => {
-          console.log("🏁 Game kết thúc:", winner.fullName);
+          console.log(" Game kết thúc:", winner.fullName);
           this.gameOverSource.next(winner.fullName);
         });
   
@@ -188,7 +189,7 @@ onResetGame(): Observable<void> {
     if (this.hubConnection) {
       try {
         await this.hubConnection.invoke("JoinRoom", roomId);
-        console.log(`✅ Đã vào SignalR room: ${roomId}`);
+        console.log(` Đã vào SignalR room: ${roomId}`);
       } catch (error) {
         console.error("Lỗi khi vào SignalR group:", error);
       }
@@ -203,7 +204,7 @@ onResetGame(): Observable<void> {
       try {
         await this.hubConnection.invoke('LeaveRoom', roomId, userId);
 
-        console.log(`✅ Đã rời SignalR room: ${roomId}`);
+        console.log(`Đã rời SignalR room: ${roomId}`);
       } catch (error) {
         console.error("Lỗi khi rời SignalR group:", error);
       }
